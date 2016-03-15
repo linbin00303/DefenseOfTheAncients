@@ -24,6 +24,7 @@
 		50D201BD1C98191900B99E3B /* DTGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D201BB1C98191900B99E3B /* DTGameViewController.m */; };
 		50D201BE1C98191900B99E3B /* DTGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D201BC1C98191900B99E3B /* DTGameViewController.xib */; };
 		50D201C11C9819C100B99E3B /* DTTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D201C01C9819C100B99E3B /* DTTabBarViewController.m */; };
+		50E0BCEB1C98588C0054283A /* UIImage+ColorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E0BCEA1C98588C0054283A /* UIImage+ColorImage.m */; };
 		81E671B156185A5960519EBC /* libPods-DefenseOfTheAncients.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF1C12D8D8461CF15A5BD2F /* libPods-DefenseOfTheAncients.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,8 @@
 		50D201BC1C98191900B99E3B /* DTGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTGameViewController.xib; sourceTree = "<group>"; };
 		50D201BF1C9819C100B99E3B /* DTTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTabBarViewController.h; sourceTree = "<group>"; };
 		50D201C01C9819C100B99E3B /* DTTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTabBarViewController.m; sourceTree = "<group>"; };
+		50E0BCE91C98588C0054283A /* UIImage+ColorImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorImage.h"; sourceTree = "<group>"; };
+		50E0BCEA1C98588C0054283A /* UIImage+ColorImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorImage.m"; sourceTree = "<group>"; };
 		BDF1C12D8D8461CF15A5BD2F /* libPods-DefenseOfTheAncients.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DefenseOfTheAncients.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC288F6EE0BECE2A5E10332A /* Pods-DefenseOfTheAncients.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefenseOfTheAncients.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DefenseOfTheAncients/Pods-DefenseOfTheAncients.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,6 +192,8 @@
 		50D201831C98102500B99E3B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				50E0BCE91C98588C0054283A /* UIImage+ColorImage.h */,
+				50E0BCEA1C98588C0054283A /* UIImage+ColorImage.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -603,6 +608,7 @@
 				50D201A91C9818E000B99E3B /* DTInformationViewController.m in Sources */,
 				50D201AE1C9818F000B99E3B /* DTTreasureBoxViewController.m in Sources */,
 				50D201B31C9818FD00B99E3B /* DTMineViewController.m in Sources */,
+				50E0BCEB1C98588C0054283A /* UIImage+ColorImage.m in Sources */,
 				50D201C11C9819C100B99E3B /* DTTabBarViewController.m in Sources */,
 				50D201511C980CA700B99E3B /* main.m in Sources */,
 			);

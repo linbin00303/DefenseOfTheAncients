@@ -8,6 +8,7 @@ target 'DefenseOfTheAncients' do
    pod 'MMProgressHUD', '~> 0.3.2'
    pod 'MJRefresh', '~> 3.1.0'
    pod 'MJExtension', '~> 3.0.10'
+   pod 'HexColors', '~> 4.0.0'
 end
 
 target 'DefenseOfTheAncientsTests' do

@@ -22,7 +22,9 @@
     DTTabBarViewController *DTTabBar = [[DTTabBarViewController alloc]init];
     self.window.rootViewController = DTTabBar;
     [self.window makeKeyAndVisible];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
+
     return YES;
 }
 

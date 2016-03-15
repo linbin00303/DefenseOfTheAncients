@@ -14,6 +14,9 @@
 #import "DTVideoViewController.h"
 #import "DTMineViewController.h"
 
+#import <HexColors/HexColors.h>
+#import "UIImage+ColorImage.h"
+
 @interface DTTabBarViewController ()
 
 @end
@@ -23,7 +26,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 定制外观
-    self.tabBar.tintColor = [UIColor colorWithRed:255/255.0f green:14/255.0f blue:149/255.0f alpha:1.0f];
+    self.tabBar.tintColor = [HXColor hx_colorWithHexRGBAString:@"#c21d02"];
+    [[UITabBar appearance] setShadowImage:[UIImage imageWithColor:[UIColor blackColor]]];
+    [[UITabBar appearance] setBackgroundImage:[UIImage imageWithColor:[UIColor blackColor]]];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:[UIColor blackColor]] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+
     self.tabBar.translucent = NO;
     
     DTInformationViewController *informationVC = [[DTInformationViewController alloc] init];
