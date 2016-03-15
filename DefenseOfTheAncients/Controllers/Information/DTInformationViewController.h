@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DTInformationViewController.h
 //  DefenseOfTheAncients
 //
 //  Created by Mr.Yao on 16/3/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface DTInformationViewController : UIViewController
 
 @end
-

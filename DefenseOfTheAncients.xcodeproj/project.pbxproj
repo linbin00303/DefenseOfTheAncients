@@ -9,12 +9,21 @@
 /* Begin PBXBuildFile section */
 		50D201511C980CA700B99E3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D201501C980CA700B99E3B /* main.m */; };
 		50D201541C980CA700B99E3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D201531C980CA700B99E3B /* AppDelegate.m */; };
-		50D201571C980CA700B99E3B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D201561C980CA700B99E3B /* ViewController.m */; };
-		50D2015A1C980CA700B99E3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D201581C980CA700B99E3B /* Main.storyboard */; };
 		50D2015C1C980CA700B99E3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D2015B1C980CA700B99E3B /* Assets.xcassets */; };
 		50D2015F1C980CA700B99E3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D2015D1C980CA700B99E3B /* LaunchScreen.storyboard */; };
 		50D2016A1C980CA800B99E3B /* DefenseOfTheAncientsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D201691C980CA800B99E3B /* DefenseOfTheAncientsTests.m */; };
 		50D201751C980CA800B99E3B /* DefenseOfTheAncientsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D201741C980CA800B99E3B /* DefenseOfTheAncientsUITests.m */; };
+		50D201A91C9818E000B99E3B /* DTInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D201A71C9818E000B99E3B /* DTInformationViewController.m */; };
+		50D201AA1C9818E000B99E3B /* DTInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D201A81C9818E000B99E3B /* DTInformationViewController.xib */; };
+		50D201AE1C9818F000B99E3B /* DTTreasureBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D201AC1C9818F000B99E3B /* DTTreasureBoxViewController.m */; };
+		50D201AF1C9818F000B99E3B /* DTTreasureBoxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D201AD1C9818F000B99E3B /* DTTreasureBoxViewController.xib */; };
+		50D201B31C9818FD00B99E3B /* DTMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D201B11C9818FD00B99E3B /* DTMineViewController.m */; };
+		50D201B41C9818FD00B99E3B /* DTMineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D201B21C9818FD00B99E3B /* DTMineViewController.xib */; };
+		50D201B81C98190900B99E3B /* DTVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D201B61C98190900B99E3B /* DTVideoViewController.m */; };
+		50D201B91C98190900B99E3B /* DTVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D201B71C98190900B99E3B /* DTVideoViewController.xib */; };
+		50D201BD1C98191900B99E3B /* DTGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D201BB1C98191900B99E3B /* DTGameViewController.m */; };
+		50D201BE1C98191900B99E3B /* DTGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D201BC1C98191900B99E3B /* DTGameViewController.xib */; };
+		50D201C11C9819C100B99E3B /* DTTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D201C01C9819C100B99E3B /* DTTabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +48,6 @@
 		50D201501C980CA700B99E3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50D201521C980CA700B99E3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		50D201531C980CA700B99E3B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		50D201551C980CA700B99E3B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		50D201561C980CA700B99E3B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		50D201591C980CA700B99E3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50D2015B1C980CA700B99E3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50D2015E1C980CA700B99E3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50D201601C980CA700B99E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +57,24 @@
 		50D201701C980CA800B99E3B /* DefenseOfTheAncientsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DefenseOfTheAncientsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D201741C980CA800B99E3B /* DefenseOfTheAncientsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefenseOfTheAncientsUITests.m; sourceTree = "<group>"; };
 		50D201761C980CA800B99E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50D201A51C98177F00B99E3B /* DTPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTPrefixHeader.pch; sourceTree = "<group>"; };
+		50D201A61C9818E000B99E3B /* DTInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTInformationViewController.h; sourceTree = "<group>"; };
+		50D201A71C9818E000B99E3B /* DTInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTInformationViewController.m; sourceTree = "<group>"; };
+		50D201A81C9818E000B99E3B /* DTInformationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTInformationViewController.xib; sourceTree = "<group>"; };
+		50D201AB1C9818F000B99E3B /* DTTreasureBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTreasureBoxViewController.h; sourceTree = "<group>"; };
+		50D201AC1C9818F000B99E3B /* DTTreasureBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTreasureBoxViewController.m; sourceTree = "<group>"; };
+		50D201AD1C9818F000B99E3B /* DTTreasureBoxViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTTreasureBoxViewController.xib; sourceTree = "<group>"; };
+		50D201B01C9818FD00B99E3B /* DTMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMineViewController.h; sourceTree = "<group>"; };
+		50D201B11C9818FD00B99E3B /* DTMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTMineViewController.m; sourceTree = "<group>"; };
+		50D201B21C9818FD00B99E3B /* DTMineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTMineViewController.xib; sourceTree = "<group>"; };
+		50D201B51C98190900B99E3B /* DTVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTVideoViewController.h; sourceTree = "<group>"; };
+		50D201B61C98190900B99E3B /* DTVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTVideoViewController.m; sourceTree = "<group>"; };
+		50D201B71C98190900B99E3B /* DTVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTVideoViewController.xib; sourceTree = "<group>"; };
+		50D201BA1C98191900B99E3B /* DTGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGameViewController.h; sourceTree = "<group>"; };
+		50D201BB1C98191900B99E3B /* DTGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTGameViewController.m; sourceTree = "<group>"; };
+		50D201BC1C98191900B99E3B /* DTGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTGameViewController.xib; sourceTree = "<group>"; };
+		50D201BF1C9819C100B99E3B /* DTTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTabBarViewController.h; sourceTree = "<group>"; };
+		50D201C01C9819C100B99E3B /* DTTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTabBarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,15 +125,18 @@
 		50D2014E1C980CA700B99E3B /* DefenseOfTheAncients */ = {
 			isa = PBXGroup;
 			children = (
+				50D201821C98102500B99E3B /* Models */,
+				50D201831C98102500B99E3B /* Utils */,
+				50D201841C98102500B99E3B /* API */,
+				50D201851C98102500B99E3B /* Controllers */,
+				50D201861C98102500B99E3B /* Views */,
 				50D201521C980CA700B99E3B /* AppDelegate.h */,
 				50D201531C980CA700B99E3B /* AppDelegate.m */,
-				50D201551C980CA700B99E3B /* ViewController.h */,
-				50D201561C980CA700B99E3B /* ViewController.m */,
-				50D201581C980CA700B99E3B /* Main.storyboard */,
 				50D2015B1C980CA700B99E3B /* Assets.xcassets */,
 				50D2015D1C980CA700B99E3B /* LaunchScreen.storyboard */,
 				50D201601C980CA700B99E3B /* Info.plist */,
 				50D2014F1C980CA700B99E3B /* Supporting Files */,
+				50D201A51C98177F00B99E3B /* DTPrefixHeader.pch */,
 			);
 			path = DefenseOfTheAncients;
 			sourceTree = "<group>";
@@ -138,6 +165,226 @@
 				50D201761C980CA800B99E3B /* Info.plist */,
 			);
 			path = DefenseOfTheAncientsUITests;
+			sourceTree = "<group>";
+		};
+		50D201821C98102500B99E3B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				50D2019B1C9815D000B99E3B /* TreasureBox */,
+				50D2019C1C9815D000B99E3B /* Information */,
+				50D2019D1C9815D000B99E3B /* Mine */,
+				50D2019E1C9815D000B99E3B /* Video */,
+				50D2019F1C9815D000B99E3B /* Game */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		50D201831C98102500B99E3B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		50D201841C98102500B99E3B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				50D201961C9815CA00B99E3B /* Information */,
+				50D201971C9815CA00B99E3B /* TreasureBox */,
+				50D201981C9815CA00B99E3B /* Game */,
+				50D201991C9815CA00B99E3B /* Mine */,
+				50D2019A1C9815CA00B99E3B /* Video */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		50D201851C98102500B99E3B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				50D201A01C9815E900B99E3B /* Tabbar */,
+				50D2018C1C9815B800B99E3B /* Information */,
+				50D2018D1C9815B800B99E3B /* TreasureBox */,
+				50D2018E1C9815B800B99E3B /* Mine */,
+				50D2018F1C9815B800B99E3B /* Video */,
+				50D201901C9815B800B99E3B /* Game */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		50D201861C98102500B99E3B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				50D201911C9815C000B99E3B /* Information */,
+				50D201921C9815C000B99E3B /* TreasureBox */,
+				50D201931C9815C000B99E3B /* Mine */,
+				50D201941C9815C000B99E3B /* Video */,
+				50D201951C9815C000B99E3B /* Game */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		50D2018C1C9815B800B99E3B /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				50D201A61C9818E000B99E3B /* DTInformationViewController.h */,
+				50D201A71C9818E000B99E3B /* DTInformationViewController.m */,
+				50D201A81C9818E000B99E3B /* DTInformationViewController.xib */,
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		50D2018D1C9815B800B99E3B /* TreasureBox */ = {
+			isa = PBXGroup;
+			children = (
+				50D201AB1C9818F000B99E3B /* DTTreasureBoxViewController.h */,
+				50D201AC1C9818F000B99E3B /* DTTreasureBoxViewController.m */,
+				50D201AD1C9818F000B99E3B /* DTTreasureBoxViewController.xib */,
+			);
+			path = TreasureBox;
+			sourceTree = "<group>";
+		};
+		50D2018E1C9815B800B99E3B /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				50D201B01C9818FD00B99E3B /* DTMineViewController.h */,
+				50D201B11C9818FD00B99E3B /* DTMineViewController.m */,
+				50D201B21C9818FD00B99E3B /* DTMineViewController.xib */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		50D2018F1C9815B800B99E3B /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				50D201B51C98190900B99E3B /* DTVideoViewController.h */,
+				50D201B61C98190900B99E3B /* DTVideoViewController.m */,
+				50D201B71C98190900B99E3B /* DTVideoViewController.xib */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		50D201901C9815B800B99E3B /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				50D201BA1C98191900B99E3B /* DTGameViewController.h */,
+				50D201BB1C98191900B99E3B /* DTGameViewController.m */,
+				50D201BC1C98191900B99E3B /* DTGameViewController.xib */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		50D201911C9815C000B99E3B /* Information */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		50D201921C9815C000B99E3B /* TreasureBox */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TreasureBox;
+			sourceTree = "<group>";
+		};
+		50D201931C9815C000B99E3B /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		50D201941C9815C000B99E3B /* Video */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		50D201951C9815C000B99E3B /* Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		50D201961C9815CA00B99E3B /* Information */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		50D201971C9815CA00B99E3B /* TreasureBox */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TreasureBox;
+			sourceTree = "<group>";
+		};
+		50D201981C9815CA00B99E3B /* Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		50D201991C9815CA00B99E3B /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		50D2019A1C9815CA00B99E3B /* Video */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		50D2019B1C9815D000B99E3B /* TreasureBox */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TreasureBox;
+			sourceTree = "<group>";
+		};
+		50D2019C1C9815D000B99E3B /* Information */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		50D2019D1C9815D000B99E3B /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		50D2019E1C9815D000B99E3B /* Video */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		50D2019F1C9815D000B99E3B /* Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		50D201A01C9815E900B99E3B /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				50D201BF1C9819C100B99E3B /* DTTabBarViewController.h */,
+				50D201C01C9819C100B99E3B /* DTTabBarViewController.m */,
+			);
+			path = Tabbar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +449,7 @@
 		50D201441C980CA700B99E3B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = DT;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Mr.Yao;
 				TargetAttributes = {
@@ -244,8 +492,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				50D2015F1C980CA700B99E3B /* LaunchScreen.storyboard in Resources */,
+				50D201B41C9818FD00B99E3B /* DTMineViewController.xib in Resources */,
+				50D201BE1C98191900B99E3B /* DTGameViewController.xib in Resources */,
+				50D201AA1C9818E000B99E3B /* DTInformationViewController.xib in Resources */,
 				50D2015C1C980CA700B99E3B /* Assets.xcassets in Resources */,
-				50D2015A1C980CA700B99E3B /* Main.storyboard in Resources */,
+				50D201B91C98190900B99E3B /* DTVideoViewController.xib in Resources */,
+				50D201AF1C9818F000B99E3B /* DTTreasureBoxViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,8 +522,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50D201571C980CA700B99E3B /* ViewController.m in Sources */,
+				50D201B81C98190900B99E3B /* DTVideoViewController.m in Sources */,
 				50D201541C980CA700B99E3B /* AppDelegate.m in Sources */,
+				50D201BD1C98191900B99E3B /* DTGameViewController.m in Sources */,
+				50D201A91C9818E000B99E3B /* DTInformationViewController.m in Sources */,
+				50D201AE1C9818F000B99E3B /* DTTreasureBoxViewController.m in Sources */,
+				50D201B31C9818FD00B99E3B /* DTMineViewController.m in Sources */,
+				50D201C11C9819C100B99E3B /* DTTabBarViewController.m in Sources */,
 				50D201511C980CA700B99E3B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,14 +565,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		50D201581C980CA700B99E3B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				50D201591C980CA700B99E3B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		50D2015D1C980CA700B99E3B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -411,6 +660,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DefenseOfTheAncients/DTPrefixHeader.pch";
 				INFOPLIST_FILE = DefenseOfTheAncients/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "GitHub-https---github.com-yaoquanfeng123.DefenseOfTheAncients";
@@ -422,6 +672,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DefenseOfTheAncients/DTPrefixHeader.pch";
 				INFOPLIST_FILE = DefenseOfTheAncients/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "GitHub-https---github.com-yaoquanfeng123.DefenseOfTheAncients";
@@ -496,6 +747,7 @@
 				50D2017B1C980CA800B99E3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50D2017C1C980CA800B99E3B /* Build configuration list for PBXNativeTarget "DefenseOfTheAncientsTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +756,7 @@
 				50D2017E1C980CA800B99E3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50D2017F1C980CA800B99E3B /* Build configuration list for PBXNativeTarget "DefenseOfTheAncientsUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +765,7 @@
 				50D201811C980CA800B99E3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
