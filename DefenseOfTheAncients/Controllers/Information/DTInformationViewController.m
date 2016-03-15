@@ -30,7 +30,7 @@
     self.naTabView = [[DTNavigationBarView alloc]initWithFrame:CGRectMake(0, 20, kScreenWidth, 40) withWidth:kScreenWidth withArray:self.arr];
     self.navigationItem.titleView = self.naTabView;
     self.scrollViewDown.contentOffset = CGPointMake(0, 0);
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(deliverValue:) name:@"123" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(deliverValue:) name:@"DTNavigationBarView" object:nil];
 }
 
 -(UIScrollView *)scrollViewDown{

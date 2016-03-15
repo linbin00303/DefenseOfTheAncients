@@ -58,7 +58,7 @@
     self.flag = NO;
     
     self.lineLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 39, 60, 1)];
-    self.lineLabel.backgroundColor = [UIColor redColor];
+    self.lineLabel.backgroundColor = [HXColor hx_colorWithHexRGBAString:@"#c21d02"];
     [self.scrollViewTop addSubview:self.lineLabel];
 }
 
@@ -69,14 +69,14 @@
     [tagButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     button.titleLabel.font = [UIFont systemFontOfSize:20];
     self.presentTag = button.tag;
-    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [button setTitleColor:[HXColor hx_colorWithHexRGBAString:@"#c21d02"] forState:UIControlStateNormal];
     
     if (button.tag >= 10004 && button.tag < (self.arrayCount+10000-3)) {
         self.scrollViewTop.contentOffset=CGPointMake(self.width*(button.tag-2-10000 ), 0);
     }
     [self changedLindLabelWithButtonTag:button.tag-10000];
     NSString *str=[NSString stringWithFormat:@"%ld",(button.tag-10000)];
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"123" object:str];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"DTNavigationBarView" object:str];
     self.flag = NO;
 }
 
@@ -93,7 +93,7 @@
 
         UIButton *button1 = (UIButton *)[self viewWithTag:(temp+10000)];
         button1.titleLabel.font = [UIFont systemFontOfSize:20];
-        [button1 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [button1 setTitleColor:[HXColor hx_colorWithHexRGBAString:@"#c21d02"] forState:UIControlStateNormal];
         [self changedLindLabelWithButtonTag:temp];
 
         self.presentTag = temp +10000;
