@@ -26,6 +26,7 @@
 		50D201C11C9819C100B99E3B /* DTTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D201C01C9819C100B99E3B /* DTTabBarViewController.m */; };
 		50E0BCEB1C98588C0054283A /* UIImage+ColorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E0BCEA1C98588C0054283A /* UIImage+ColorImage.m */; };
 		50E0BCEE1C9861320054283A /* DTRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E0BCED1C9861320054283A /* DTRefreshHeader.m */; };
+		50E0BD131C986F670054283A /* DTNavigationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E0BD121C986F670054283A /* DTNavigationBarView.m */; };
 		81E671B156185A5960519EBC /* libPods-DefenseOfTheAncients.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF1C12D8D8461CF15A5BD2F /* libPods-DefenseOfTheAncients.a */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,8 @@
 		50E0BCEA1C98588C0054283A /* UIImage+ColorImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorImage.m"; sourceTree = "<group>"; };
 		50E0BCEC1C9861320054283A /* DTRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRefreshHeader.h; sourceTree = "<group>"; };
 		50E0BCED1C9861320054283A /* DTRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTRefreshHeader.m; sourceTree = "<group>"; };
+		50E0BD111C986F670054283A /* DTNavigationBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTNavigationBarView.h; sourceTree = "<group>"; };
+		50E0BD121C986F670054283A /* DTNavigationBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTNavigationBarView.m; sourceTree = "<group>"; };
 		BDF1C12D8D8461CF15A5BD2F /* libPods-DefenseOfTheAncients.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DefenseOfTheAncients.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC288F6EE0BECE2A5E10332A /* Pods-DefenseOfTheAncients.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefenseOfTheAncients.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DefenseOfTheAncients/Pods-DefenseOfTheAncients.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -236,6 +239,8 @@
 				50D201931C9815C000B99E3B /* Mine */,
 				50D201941C9815C000B99E3B /* Video */,
 				50D201951C9815C000B99E3B /* Game */,
+				50E0BD111C986F670054283A /* DTNavigationBarView.h */,
+				50E0BD121C986F670054283A /* DTNavigationBarView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -617,6 +622,7 @@
 				50D201C11C9819C100B99E3B /* DTTabBarViewController.m in Sources */,
 				50E0BCEE1C9861320054283A /* DTRefreshHeader.m in Sources */,
 				50D201511C980CA700B99E3B /* main.m in Sources */,
+				50E0BD131C986F670054283A /* DTNavigationBarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
