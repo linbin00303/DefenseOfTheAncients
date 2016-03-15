@@ -13,7 +13,7 @@
 @property(nonatomic,assign)CGFloat viewWidth;
 @property(nonatomic,assign)CGFloat viewHeight;
 @property(nonatomic,retain)UIScrollView *scrollViewTop;
-@property(nonatomic,retain)UIView *lineView;
+@property(nonatomic,retain)UILabel *lineLabel;
 @property(nonatomic,retain)NSArray *titleArray;
 @property(nonatomic,assign)NSInteger presentTag;
 @property(nonatomic,assign)NSInteger arrayCount;
@@ -46,26 +46,35 @@
         button.frame=CGRectMake(self.width * i, 0, self.width, 40);
         [button setTitle:self.titleArray[i] forState:0];
         button.tag=i+10000;
-        [button setTitleColor:[UIColor whiteColor] forState:0];
+        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(click:) forControlEvents:1<<6];
+        if (button.tag ==10000) {
+            button.titleLabel.font = [UIFont systemFontOfSize:20];
+            [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        }
         [self.scrollViewTop addSubview:button];
     }
     self.presentTag = 10000;
     self.flag = NO;
+    
+    self.lineLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 39, 60, 1)];
+    self.lineLabel.backgroundColor = [UIColor redColor];
+    [self.scrollViewTop addSubview:self.lineLabel];
 }
 
 - (void)click:(UIButton *)button{
     self.flag = YES;
     UIButton *tagButton = (UIButton *)[self viewWithTag:self.presentTag];
     tagButton.titleLabel.font = [UIFont systemFontOfSize:17];
-    
-    button.titleLabel.font = [UIFont systemFontOfSize:25];
+    [tagButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    button.titleLabel.font = [UIFont systemFontOfSize:20];
     self.presentTag = button.tag;
+    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     
     if (button.tag >= 10004 && button.tag < (self.arrayCount+10000-3)) {
         self.scrollViewTop.contentOffset=CGPointMake(self.width*(button.tag-2-10000 ), 0);
     }
-    
+    [self changedLindLabelWithButtonTag:button.tag-10000];
     NSString *str=[NSString stringWithFormat:@"%ld",(button.tag-10000)];
     [[NSNotificationCenter defaultCenter]postNotificationName:@"123" object:str];
     self.flag = NO;
@@ -80,10 +89,22 @@
     if (self.flag == NO) {
         UIButton *button = (UIButton *)[self viewWithTag:self.presentTag];
         button.titleLabel.font = [UIFont systemFontOfSize:17];
+        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+
         UIButton *button1 = (UIButton *)[self viewWithTag:(temp+10000)];
-        button1.titleLabel.font = [UIFont systemFontOfSize:25];
+        button1.titleLabel.font = [UIFont systemFontOfSize:20];
+        [button1 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [self changedLindLabelWithButtonTag:temp];
+
         self.presentTag = temp +10000;
     }
+}
+
+
+- (void)changedLindLabelWithButtonTag:(NSInteger)tag{
+    [UIView animateWithDuration:0.1 animations:^{
+        self.lineLabel.frame = CGRectMake(self.width*tag, 39, 60, 1);
+    }];
 }
 
 @end

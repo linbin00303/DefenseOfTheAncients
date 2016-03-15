@@ -13,8 +13,6 @@
 #import "DTGameViewController.h"
 #import "DTVideoViewController.h"
 #import "DTMineViewController.h"
-
-#import <HexColors/HexColors.h>
 #import "UIImage+ColorImage.h"
 
 @interface DTTabBarViewController ()

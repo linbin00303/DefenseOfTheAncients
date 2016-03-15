@@ -29,20 +29,21 @@
     self.navigationController.navigationBar.translucent = NO;
     self.naTabView = [[DTNavigationBarView alloc]initWithFrame:CGRectMake(0, 20, kScreenWidth, 40) withWidth:kScreenWidth withArray:self.arr];
     self.navigationItem.titleView = self.naTabView;
-    [self createScrollViewDown];
+    self.scrollViewDown.contentOffset = CGPointMake(0, 0);
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(deliverValue:) name:@"123" object:nil];
 }
 
-- (void)createScrollViewDown{
-    
-    self.scrollViewDown=[[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
-    self.scrollViewDown.contentSize=CGSizeMake(kScreenWidth*5, 0);
-    self.scrollViewDown.backgroundColor = [UIColor colorWithRed:arc4random()%256/255.0 green:arc4random()%256/255.0 blue:arc4random()%256/255.0 alpha:arc4random()%256/255.0];
-    self.scrollViewDown.pagingEnabled=YES;
-    self.scrollViewDown.bounces=NO;
-    self.scrollViewDown.delegate = self;
-    [self.view addSubview:self.scrollViewDown];
-       ///传值
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(deliverValue:) name:@"123" object:nil];
+-(UIScrollView *)scrollViewDown{
+    if (!_scrollViewDown) {
+        self.scrollViewDown=[[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+        self.scrollViewDown.contentSize=CGSizeMake(kScreenWidth*5, 0);
+        self.scrollViewDown.backgroundColor = [UIColor colorWithRed:arc4random()%256/255.0 green:arc4random()%256/255.0 blue:arc4random()%256/255.0 alpha:arc4random()%256/255.0];
+        self.scrollViewDown.pagingEnabled=YES;
+        self.scrollViewDown.bounces=NO;
+        self.scrollViewDown.delegate = self;
+        [self.view addSubview:self.scrollViewDown];
+    }
+    return _scrollViewDown;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
