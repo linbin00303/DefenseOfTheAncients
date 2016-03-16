@@ -36,16 +36,17 @@
         _reqManager.responseSerializer = [AFHTTPResponseSerializer serializer];
     }
     NSString *apiUrl = [NSString stringWithFormat:kApiBaseUrl, path];
-    
     NSError *error;
     NSMutableURLRequest *req = [_reqManager.requestSerializer requestWithMethod:httpMethod URLString:apiUrl parameters:nil error:&error];
     AFHTTPRequestOperation *reqOp = [[AFHTTPRequestOperation alloc] initWithRequest:req];
     [reqOp setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
       NSDictionary *data = [self extractDataFromResponseObject:responseObject];
-      if (data.count) {
+      if (data) {
           succBlocks(data);
-      }else {
+      } else if (!data) {
           failBlocks([NSError errorWithDomain:@"返回数据为空" code:-1 userInfo:nil]);
+      } else {
+          DTLog(@"error");
       }
     }
         failure:^(AFHTTPRequestOperation *operation, NSError *error) {

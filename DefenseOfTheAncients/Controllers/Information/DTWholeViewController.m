@@ -6,14 +6,14 @@
 //  Copyright © 2016年 Mr.Yao. All rights reserved.
 //
 
-#import "DTApiManager+DTInformation.h"
-#import "DTApiManager.h"
-#import "DTInformationCell.h"
-#import "DTRefreshFooter.h"
-#import "DTRefreshHeader.h"
 #import "DTWholeViewController.h"
+#import "DTInformationCell.h"
+#import "DTApiManager.h"
+#import "DTApiManager+DTInformation.h"
+#import "DTRefreshHeader.h"
+#import "DTRefreshFooter.h"
 
-@interface DTWholeViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface DTWholeViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (assign, nonatomic) NSInteger pageIndex;
@@ -28,63 +28,60 @@
     [self setUpViews];
 }
 
-- (void)requestDataSource {
+- (void)requestDataSource{
     if (!self.dataSource) {
         self.dataSource = [NSMutableArray new];
     }
-    [[DTApiManager sharedApiManager] requestInformationForWholeWithPageIndex:self.pageIndex
-        SuccBlocks:^(NSArray *WholeItems) {
-          if (self.pageIndex == 1) {
-              [self.dataSource removeAllObjects];
-          }
-          [self.dataSource addObjectsFromArray:WholeItems];
-          [self.tableView reloadData];
-          [self stopRefreshing];
+    [[DTApiManager sharedApiManager]requestInformationForWholeWithPageIndex:self.pageIndex succBlocks:^(NSArray *WholeItems) {
+        if (self.pageIndex == 1) {
+            [self.dataSource removeAllObjects];
         }
-        failBlocks:^(NSError *error) {
-          DTLog(@"%@", error.domain);
-          [self stopRefreshing];
-        }];
+        [self.dataSource addObjectsFromArray:WholeItems];
+        [self.tableView reloadData];
+        [self stopRefreshing];
+    } failBlocks:^(NSError *error) {
+        DTLog(@"%@",error.domain);
+        [self stopRefreshing];
+    }];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dataSource.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    DTInformationCell *cell = [tableView dequeueReusableCellWithIdentifier:kDTInformationCellIdentifier];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    DTInformationCell * cell = [tableView dequeueReusableCellWithIdentifier:kDTInformationCellIdentifier];
     [cell setUpCellViewsWithItem:self.dataSource[indexPath.row]];
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 102.0f;
 }
 
-- (void)setUpViews {
+- (void)setUpViews{
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.showsHorizontalScrollIndicator = NO;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([DTInformationCell class]) bundle:nil]
-         forCellReuseIdentifier:kDTInformationCellIdentifier];
-
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([DTInformationCell class]) bundle:nil] forCellReuseIdentifier:kDTInformationCellIdentifier];
+    
     __weak typeof(self) weakSelf = self;
     self.tableView.mj_header = [DTRefreshHeader headerWithRefreshingBlock:^{
-      self.pageIndex = 1;
-      [weakSelf requestDataSource];
+        self.pageIndex = 1;
+        [weakSelf requestDataSource];
     }];
-
+    
     [self.tableView.mj_header beginRefreshing];
-
+    
     self.tableView.mj_footer = [DTRefreshFooter footerWithRefreshingBlock:^{
-      self.pageIndex++;
-      [weakSelf requestDataSource];
+        self.pageIndex ++;
+        [weakSelf requestDataSource];
     }];
 }
 
-- (void)stopRefreshing {
+- (void)stopRefreshing{
     if ([self.tableView.mj_header isRefreshing]) {
         [self.tableView.mj_header endRefreshing];
     }
