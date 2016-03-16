@@ -26,6 +26,8 @@
 
 @implementation DTInformationViewController
 
+#pragma mark - Lift Cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUpViews];
@@ -45,6 +47,8 @@
     return _scrollViewDown;
 }
 
+#pragma mark - init Views
+
 - (void)setUpViews {
     self.view.backgroundColor = [UIColor whiteColor];
     self.arr = @[ @"全部", @"官方", @"更新", @"媒体", @"赛事" ];
@@ -63,6 +67,7 @@
     DTUpdateViewController *updateVC = [[DTUpdateViewController alloc] init];
     DTMediaViewController *mediaVC = [[DTMediaViewController alloc] init];
     DTMatchViewController *matchVC = [[DTMatchViewController alloc] init];
+    
     [self addChildViewController:wholeVC];
     [self addChildViewController:OfficalVC];
     [self addChildViewController:updateVC];
