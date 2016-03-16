@@ -12,6 +12,7 @@
 #import "DTMatchViewController.h"
 #import "DTRefreshFooter.h"
 #import "DTRefreshHeader.h"
+#import "DTInformationDetailViewController.h"
 
 @interface DTMatchViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -60,6 +61,14 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 102.0f;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    DTInformationModels *item =self.dataSource[indexPath.row];
+    DTInformationDetailViewController *detailVC = [[DTInformationDetailViewController alloc]init];
+    detailVC.deatilUrl = item.url;
+    detailVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 - (void)setUpViews {

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50BC9ACD1C99AFD600C1EB78 /* DTInformationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BC9ACB1C99AFD600C1EB78 /* DTInformationDetailViewController.m */; };
+		50BC9ACE1C99AFD600C1EB78 /* DTInformationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50BC9ACC1C99AFD600C1EB78 /* DTInformationDetailViewController.xib */; };
+		50BC9AD11C99BA9C00C1EB78 /* DTNavItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BC9AD01C99BA9C00C1EB78 /* DTNavItems.m */; };
 		50C78DB01C98F9C900F23D9F /* DTWholeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C78DAE1C98F9C900F23D9F /* DTWholeViewController.m */; };
 		50C78DB11C98F9C900F23D9F /* DTWholeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50C78DAF1C98F9C900F23D9F /* DTWholeViewController.xib */; };
 		50C78DB51C98FA0100F23D9F /* DTOfficialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C78DB31C98FA0100F23D9F /* DTOfficialViewController.m */; };
@@ -66,6 +69,11 @@
 
 /* Begin PBXFileReference section */
 		2552A424E99AADA6CBB17849 /* Pods-DefenseOfTheAncients.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefenseOfTheAncients.release.xcconfig"; path = "Pods/Target Support Files/Pods-DefenseOfTheAncients/Pods-DefenseOfTheAncients.release.xcconfig"; sourceTree = "<group>"; };
+		50BC9ACA1C99AFD600C1EB78 /* DTInformationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTInformationDetailViewController.h; sourceTree = "<group>"; };
+		50BC9ACB1C99AFD600C1EB78 /* DTInformationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTInformationDetailViewController.m; sourceTree = "<group>"; };
+		50BC9ACC1C99AFD600C1EB78 /* DTInformationDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTInformationDetailViewController.xib; sourceTree = "<group>"; };
+		50BC9ACF1C99BA9C00C1EB78 /* DTNavItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTNavItems.h; sourceTree = "<group>"; };
+		50BC9AD01C99BA9C00C1EB78 /* DTNavItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTNavItems.m; sourceTree = "<group>"; };
 		50C78DAD1C98F9C900F23D9F /* DTWholeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTWholeViewController.h; sourceTree = "<group>"; };
 		50C78DAE1C98F9C900F23D9F /* DTWholeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTWholeViewController.m; sourceTree = "<group>"; };
 		50C78DAF1C98F9C900F23D9F /* DTWholeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTWholeViewController.xib; sourceTree = "<group>"; };
@@ -249,6 +257,8 @@
 				50E0BCED1C9861320054283A /* DTRefreshHeader.m */,
 				50C78DD71C9959CF00F23D9F /* DTRefreshFooter.h */,
 				50C78DD81C9959CF00F23D9F /* DTRefreshFooter.m */,
+				50BC9ACF1C99BA9C00C1EB78 /* DTNavItems.h */,
+				50BC9AD01C99BA9C00C1EB78 /* DTNavItems.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -317,6 +327,9 @@
 				50C78DC11C98FA5300F23D9F /* DTMatchViewController.h */,
 				50C78DC21C98FA5300F23D9F /* DTMatchViewController.m */,
 				50C78DC31C98FA5300F23D9F /* DTMatchViewController.xib */,
+				50BC9ACA1C99AFD600C1EB78 /* DTInformationDetailViewController.h */,
+				50BC9ACB1C99AFD600C1EB78 /* DTInformationDetailViewController.m */,
+				50BC9ACC1C99AFD600C1EB78 /* DTInformationDetailViewController.xib */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -608,6 +621,7 @@
 			files = (
 				50C78DB11C98F9C900F23D9F /* DTWholeViewController.xib in Resources */,
 				50C78DCA1C990E6A00F23D9F /* DTInformationCell.xib in Resources */,
+				50BC9ACE1C99AFD600C1EB78 /* DTInformationDetailViewController.xib in Resources */,
 				50D2015F1C980CA700B99E3B /* LaunchScreen.storyboard in Resources */,
 				50C78DC51C98FA5300F23D9F /* DTMatchViewController.xib in Resources */,
 				50D201B41C9818FD00B99E3B /* DTMineViewController.xib in Resources */,
@@ -705,9 +719,11 @@
 				50E0BCEB1C98588C0054283A /* UIImage+ColorImage.m in Sources */,
 				50D201C11C9819C100B99E3B /* DTTabBarViewController.m in Sources */,
 				50C78DB01C98F9C900F23D9F /* DTWholeViewController.m in Sources */,
+				50BC9AD11C99BA9C00C1EB78 /* DTNavItems.m in Sources */,
 				50C78DD91C9959CF00F23D9F /* DTRefreshFooter.m in Sources */,
 				50C78DD01C9940E600F23D9F /* DTAccount.m in Sources */,
 				50C78DCD1C99373B00F23D9F /* DTApiManager.m in Sources */,
+				50BC9ACD1C99AFD600C1EB78 /* DTInformationDetailViewController.m in Sources */,
 				50E0BCEE1C9861320054283A /* DTRefreshHeader.m in Sources */,
 				50D201511C980CA700B99E3B /* main.m in Sources */,
 				50E0BD131C986F670054283A /* DTNavigationBarView.m in Sources */,

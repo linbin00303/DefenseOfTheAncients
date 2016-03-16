@@ -11,6 +11,7 @@
 #import "DTRefreshFooter.h"
 #import "DTRefreshHeader.h"
 #import "DTOfficialViewController.h"
+#import "DTInformationDetailViewController.h"
 
 @interface DTOfficialViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -50,6 +51,14 @@
     DTInformationCell *cell = [tableView dequeueReusableCellWithIdentifier:kDTInformationCellIdentifier];
     [cell setUpCellViewsWithItem:self.dataSource[indexPath.row]];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    DTInformationModels *item =self.dataSource[indexPath.row];
+    DTInformationDetailViewController *detailVC = [[DTInformationDetailViewController alloc]init];
+    detailVC.deatilUrl = item.url;
+    detailVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
