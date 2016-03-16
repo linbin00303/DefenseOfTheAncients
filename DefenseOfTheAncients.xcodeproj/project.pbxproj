@@ -17,6 +17,8 @@
 		50C78DC01C98FA3A00F23D9F /* DTMediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50C78DBE1C98FA3A00F23D9F /* DTMediaViewController.xib */; };
 		50C78DC41C98FA5300F23D9F /* DTMatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C78DC21C98FA5300F23D9F /* DTMatchViewController.m */; };
 		50C78DC51C98FA5300F23D9F /* DTMatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50C78DC31C98FA5300F23D9F /* DTMatchViewController.xib */; };
+		50C78DC91C990E6A00F23D9F /* DTInformationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C78DC71C990E6A00F23D9F /* DTInformationCell.m */; };
+		50C78DCA1C990E6A00F23D9F /* DTInformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50C78DC81C990E6A00F23D9F /* DTInformationCell.xib */; };
 		50D201511C980CA700B99E3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D201501C980CA700B99E3B /* main.m */; };
 		50D201541C980CA700B99E3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D201531C980CA700B99E3B /* AppDelegate.m */; };
 		50D2015C1C980CA700B99E3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D2015B1C980CA700B99E3B /* Assets.xcassets */; };
@@ -74,6 +76,9 @@
 		50C78DC11C98FA5300F23D9F /* DTMatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMatchViewController.h; sourceTree = "<group>"; };
 		50C78DC21C98FA5300F23D9F /* DTMatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTMatchViewController.m; sourceTree = "<group>"; };
 		50C78DC31C98FA5300F23D9F /* DTMatchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTMatchViewController.xib; sourceTree = "<group>"; };
+		50C78DC61C990E6A00F23D9F /* DTInformationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTInformationCell.h; sourceTree = "<group>"; };
+		50C78DC71C990E6A00F23D9F /* DTInformationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTInformationCell.m; sourceTree = "<group>"; };
+		50C78DC81C990E6A00F23D9F /* DTInformationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTInformationCell.xib; sourceTree = "<group>"; };
 		50D2014C1C980CA700B99E3B /* DefenseOfTheAncients.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DefenseOfTheAncients.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D201501C980CA700B99E3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50D201521C980CA700B99E3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -338,6 +343,9 @@
 		50D201911C9815C000B99E3B /* Information */ = {
 			isa = PBXGroup;
 			children = (
+				50C78DC61C990E6A00F23D9F /* DTInformationCell.h */,
+				50C78DC71C990E6A00F23D9F /* DTInformationCell.m */,
+				50C78DC81C990E6A00F23D9F /* DTInformationCell.xib */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -574,6 +582,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50C78DB11C98F9C900F23D9F /* DTWholeViewController.xib in Resources */,
+				50C78DCA1C990E6A00F23D9F /* DTInformationCell.xib in Resources */,
 				50D2015F1C980CA700B99E3B /* LaunchScreen.storyboard in Resources */,
 				50C78DC51C98FA5300F23D9F /* DTMatchViewController.xib in Resources */,
 				50D201B41C9818FD00B99E3B /* DTMineViewController.xib in Resources */,
@@ -672,6 +681,7 @@
 				50E0BCEE1C9861320054283A /* DTRefreshHeader.m in Sources */,
 				50D201511C980CA700B99E3B /* main.m in Sources */,
 				50E0BD131C986F670054283A /* DTNavigationBarView.m in Sources */,
+				50C78DC91C990E6A00F23D9F /* DTInformationCell.m in Sources */,
 				50C78DBF1C98FA3A00F23D9F /* DTMediaViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
