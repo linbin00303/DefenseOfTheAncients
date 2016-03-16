@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50C78DB01C98F9C900F23D9F /* DTWholeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C78DAE1C98F9C900F23D9F /* DTWholeViewController.m */; };
+		50C78DB11C98F9C900F23D9F /* DTWholeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50C78DAF1C98F9C900F23D9F /* DTWholeViewController.xib */; };
+		50C78DB51C98FA0100F23D9F /* DTOfficialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C78DB31C98FA0100F23D9F /* DTOfficialViewController.m */; };
+		50C78DB61C98FA0100F23D9F /* DTOfficialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50C78DB41C98FA0100F23D9F /* DTOfficialViewController.xib */; };
+		50C78DBA1C98FA1900F23D9F /* DTUpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C78DB81C98FA1900F23D9F /* DTUpdateViewController.m */; };
+		50C78DBB1C98FA1900F23D9F /* DTUpdateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50C78DB91C98FA1900F23D9F /* DTUpdateViewController.xib */; };
+		50C78DBF1C98FA3A00F23D9F /* DTMediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C78DBD1C98FA3A00F23D9F /* DTMediaViewController.m */; };
+		50C78DC01C98FA3A00F23D9F /* DTMediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50C78DBE1C98FA3A00F23D9F /* DTMediaViewController.xib */; };
+		50C78DC41C98FA5300F23D9F /* DTMatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C78DC21C98FA5300F23D9F /* DTMatchViewController.m */; };
+		50C78DC51C98FA5300F23D9F /* DTMatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50C78DC31C98FA5300F23D9F /* DTMatchViewController.xib */; };
 		50D201511C980CA700B99E3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D201501C980CA700B99E3B /* main.m */; };
 		50D201541C980CA700B99E3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D201531C980CA700B99E3B /* AppDelegate.m */; };
 		50D2015C1C980CA700B99E3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D2015B1C980CA700B99E3B /* Assets.xcassets */; };
@@ -49,6 +59,21 @@
 
 /* Begin PBXFileReference section */
 		2552A424E99AADA6CBB17849 /* Pods-DefenseOfTheAncients.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefenseOfTheAncients.release.xcconfig"; path = "Pods/Target Support Files/Pods-DefenseOfTheAncients/Pods-DefenseOfTheAncients.release.xcconfig"; sourceTree = "<group>"; };
+		50C78DAD1C98F9C900F23D9F /* DTWholeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTWholeViewController.h; sourceTree = "<group>"; };
+		50C78DAE1C98F9C900F23D9F /* DTWholeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTWholeViewController.m; sourceTree = "<group>"; };
+		50C78DAF1C98F9C900F23D9F /* DTWholeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTWholeViewController.xib; sourceTree = "<group>"; };
+		50C78DB21C98FA0100F23D9F /* DTOfficialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTOfficialViewController.h; sourceTree = "<group>"; };
+		50C78DB31C98FA0100F23D9F /* DTOfficialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTOfficialViewController.m; sourceTree = "<group>"; };
+		50C78DB41C98FA0100F23D9F /* DTOfficialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTOfficialViewController.xib; sourceTree = "<group>"; };
+		50C78DB71C98FA1900F23D9F /* DTUpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTUpdateViewController.h; sourceTree = "<group>"; };
+		50C78DB81C98FA1900F23D9F /* DTUpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTUpdateViewController.m; sourceTree = "<group>"; };
+		50C78DB91C98FA1900F23D9F /* DTUpdateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTUpdateViewController.xib; sourceTree = "<group>"; };
+		50C78DBC1C98FA3A00F23D9F /* DTMediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMediaViewController.h; sourceTree = "<group>"; };
+		50C78DBD1C98FA3A00F23D9F /* DTMediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTMediaViewController.m; sourceTree = "<group>"; };
+		50C78DBE1C98FA3A00F23D9F /* DTMediaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTMediaViewController.xib; sourceTree = "<group>"; };
+		50C78DC11C98FA5300F23D9F /* DTMatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMatchViewController.h; sourceTree = "<group>"; };
+		50C78DC21C98FA5300F23D9F /* DTMatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTMatchViewController.m; sourceTree = "<group>"; };
+		50C78DC31C98FA5300F23D9F /* DTMatchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTMatchViewController.xib; sourceTree = "<group>"; };
 		50D2014C1C980CA700B99E3B /* DefenseOfTheAncients.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DefenseOfTheAncients.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D201501C980CA700B99E3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50D201521C980CA700B99E3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -251,6 +276,21 @@
 				50D201A61C9818E000B99E3B /* DTInformationViewController.h */,
 				50D201A71C9818E000B99E3B /* DTInformationViewController.m */,
 				50D201A81C9818E000B99E3B /* DTInformationViewController.xib */,
+				50C78DAD1C98F9C900F23D9F /* DTWholeViewController.h */,
+				50C78DAE1C98F9C900F23D9F /* DTWholeViewController.m */,
+				50C78DAF1C98F9C900F23D9F /* DTWholeViewController.xib */,
+				50C78DB21C98FA0100F23D9F /* DTOfficialViewController.h */,
+				50C78DB31C98FA0100F23D9F /* DTOfficialViewController.m */,
+				50C78DB41C98FA0100F23D9F /* DTOfficialViewController.xib */,
+				50C78DB71C98FA1900F23D9F /* DTUpdateViewController.h */,
+				50C78DB81C98FA1900F23D9F /* DTUpdateViewController.m */,
+				50C78DB91C98FA1900F23D9F /* DTUpdateViewController.xib */,
+				50C78DBC1C98FA3A00F23D9F /* DTMediaViewController.h */,
+				50C78DBD1C98FA3A00F23D9F /* DTMediaViewController.m */,
+				50C78DBE1C98FA3A00F23D9F /* DTMediaViewController.xib */,
+				50C78DC11C98FA5300F23D9F /* DTMatchViewController.h */,
+				50C78DC21C98FA5300F23D9F /* DTMatchViewController.m */,
+				50C78DC31C98FA5300F23D9F /* DTMatchViewController.xib */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -533,12 +573,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50C78DB11C98F9C900F23D9F /* DTWholeViewController.xib in Resources */,
 				50D2015F1C980CA700B99E3B /* LaunchScreen.storyboard in Resources */,
+				50C78DC51C98FA5300F23D9F /* DTMatchViewController.xib in Resources */,
 				50D201B41C9818FD00B99E3B /* DTMineViewController.xib in Resources */,
+				50C78DBB1C98FA1900F23D9F /* DTUpdateViewController.xib in Resources */,
+				50C78DB61C98FA0100F23D9F /* DTOfficialViewController.xib in Resources */,
 				50D201BE1C98191900B99E3B /* DTGameViewController.xib in Resources */,
 				50D201AA1C9818E000B99E3B /* DTInformationViewController.xib in Resources */,
 				50D2015C1C980CA700B99E3B /* Assets.xcassets in Resources */,
 				50D201B91C98190900B99E3B /* DTVideoViewController.xib in Resources */,
+				50C78DC01C98FA3A00F23D9F /* DTMediaViewController.xib in Resources */,
 				50D201AF1C9818F000B99E3B /* DTTreasureBoxViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -618,11 +663,16 @@
 				50D201A91C9818E000B99E3B /* DTInformationViewController.m in Sources */,
 				50D201AE1C9818F000B99E3B /* DTTreasureBoxViewController.m in Sources */,
 				50D201B31C9818FD00B99E3B /* DTMineViewController.m in Sources */,
+				50C78DC41C98FA5300F23D9F /* DTMatchViewController.m in Sources */,
+				50C78DB51C98FA0100F23D9F /* DTOfficialViewController.m in Sources */,
+				50C78DBA1C98FA1900F23D9F /* DTUpdateViewController.m in Sources */,
 				50E0BCEB1C98588C0054283A /* UIImage+ColorImage.m in Sources */,
 				50D201C11C9819C100B99E3B /* DTTabBarViewController.m in Sources */,
+				50C78DB01C98F9C900F23D9F /* DTWholeViewController.m in Sources */,
 				50E0BCEE1C9861320054283A /* DTRefreshHeader.m in Sources */,
 				50D201511C980CA700B99E3B /* main.m in Sources */,
 				50E0BD131C986F670054283A /* DTNavigationBarView.m in Sources */,
+				50C78DBF1C98FA3A00F23D9F /* DTMediaViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
