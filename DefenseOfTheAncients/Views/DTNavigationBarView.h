@@ -10,7 +10,7 @@
 
 @interface DTNavigationBarView : UIView
 
-- (void) deliver:(UIScrollView *)scrollView;
+- (void)deliver:(UIScrollView *)scrollView;
 
 - (instancetype)initWithFrame:(CGRect)frame withWidth:(CGFloat)width withArray:(NSArray *)arr;
 

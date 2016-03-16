@@ -14,9 +14,11 @@
 #import "DTRefreshHeader.h"
 
 @interface DTMatchViewController () <UITableViewDataSource, UITableViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (assign, nonatomic) NSInteger pageIndex;
 @property (strong, nonatomic) NSMutableArray *dataSource;
+
 @end
 
 @implementation DTMatchViewController

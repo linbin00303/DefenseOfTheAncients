@@ -15,7 +15,7 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
--(void)setUpCellViewsWithItem:(DTInformationModels *)item{
+- (void)setUpCellViewsWithItem:(DTInformationModels *)item {
     self.titleLabel.text = item.title;
     self.contentLabel.text = item.desc;
     [self.infoImageView setImageWithURL:[NSURL URLWithString:item.pic]];
@@ -23,12 +23,12 @@
     self.typeLabel.text = [self typeStringWithItemType:item.type];
 }
 
-- (NSString *)typeStringWithItemType:(NSString *)itemType{
+- (NSString *)typeStringWithItemType:(NSString *)itemType {
     if ([itemType isEqualToString:@"govnews"]) {
         return @"官方";
-    }else if ([itemType isEqualToString:@"matchnews"]){
+    } else if ([itemType isEqualToString:@"matchnews"]) {
         return @"赛事";
-    }else if ([itemType isEqualToString:@"medianews"]){
+    } else if ([itemType isEqualToString:@"medianews"]) {
         return @"媒体";
     }
     return @"";
