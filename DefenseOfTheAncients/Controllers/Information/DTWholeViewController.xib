@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DTWholeViewController">
             <connections>
+                <outlet property="tableView" destination="sH1-U9-Zkg" id="mje-PG-Ebp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +15,19 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sH1-U9-Zkg">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="sH1-U9-Zkg" secondAttribute="bottom" id="1cO-m7-qBR"/>
+                <constraint firstItem="sH1-U9-Zkg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3ii-iy-bEE"/>
+                <constraint firstItem="sH1-U9-Zkg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="H9Y-ue-Mff"/>
+                <constraint firstAttribute="trailing" secondItem="sH1-U9-Zkg" secondAttribute="trailing" id="KA1-WM-Mfd"/>
+            </constraints>
         </view>
     </objects>
 </document>

@@ -31,6 +31,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUpViews];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    [self addChildViewControllerToScroller];
 }
 
 #pragma mark - Getters & Setters
@@ -57,7 +59,6 @@
     self.naTabView = [[DTNavigationBarView alloc] initWithFrame:CGRectMake(0, 20, kScreenWidth, 40) withWidth:kScreenWidth withArray:self.arr];
     self.navigationItem.titleView = self.naTabView;
     self.scrollViewDown.contentOffset = CGPointMake(0, 0);
-    [self addChildViewControllerToScroller];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deliverValue:) name:@"DTNavigationBarView" object:nil];
 }
 
@@ -67,18 +68,18 @@
     DTUpdateViewController *updateVC = [[DTUpdateViewController alloc] init];
     DTMediaViewController *mediaVC = [[DTMediaViewController alloc] init];
     DTMatchViewController *matchVC = [[DTMatchViewController alloc] init];
-    
+
     [self addChildViewController:wholeVC];
     [self addChildViewController:OfficalVC];
     [self addChildViewController:updateVC];
     [self addChildViewController:mediaVC];
     [self addChildViewController:matchVC];
 
-    wholeVC.view.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
-    OfficalVC.view.frame = CGRectMake(kScreenWidth, 0, kScreenWidth, kScreenHeight);
-    updateVC.view.frame = CGRectMake(2 * kScreenWidth, 0, kScreenWidth, kScreenHeight);
-    mediaVC.view.frame = CGRectMake(3 * kScreenWidth, 0, kScreenWidth, kScreenHeight);
-    matchVC.view.frame = CGRectMake(4 * kScreenWidth, 0, kScreenWidth, kScreenHeight);
+    wholeVC.view.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight - 64 - 44);
+    OfficalVC.view.frame = CGRectMake(kScreenWidth, 0, kScreenWidth, kScreenHeight - 64 - 44);
+    updateVC.view.frame = CGRectMake(2 * kScreenWidth, 0, kScreenWidth, kScreenHeight - 64 - 44);
+    mediaVC.view.frame = CGRectMake(3 * kScreenWidth, 0, kScreenWidth, kScreenHeight - 64 - 44);
+    matchVC.view.frame = CGRectMake(4 * kScreenWidth, 0, kScreenWidth, kScreenHeight - 64 - 44);
 
     [self.scrollViewDown addSubview:wholeVC.view];
     [self.scrollViewDown addSubview:OfficalVC.view];
@@ -104,6 +105,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

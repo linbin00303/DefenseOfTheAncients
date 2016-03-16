@@ -4,7 +4,7 @@
 # use_frameworks!
 
 target 'DefenseOfTheAncients' do
-   pod 'AFNetworking', '~> 3.0.4'
+   pod 'AFNetworking', '~> 2.5.3’
    pod 'MMProgressHUD', '~> 0.3.2'
    pod 'MJRefresh', '~> 3.1.0'
    pod 'MJExtension', '~> 3.0.10'

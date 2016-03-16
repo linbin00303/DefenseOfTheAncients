@@ -11,9 +11,9 @@
 
 // --> 统一的日志输出
 #ifdef DEBUG
-#define GMLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#define DTLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #else
-#define GMLog(fmt, ...)
+#define DTLog(fmt, ...)
 #endif
 // <-- end 统一的日志输出
 
@@ -22,5 +22,26 @@
 // 屏幕宽高
 #define kScreenWidth    [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight   [UIScreen mainScreen].bounds.size.height
+
+//========================URl For App========================//
+
+#define DTAppLeadImage_url @"http://www.dota2.com.cn/wapnews/appUpdate.html?1458106555.181774"
+
+#define DTInformation_Whole_ScrollView_url @"http://www.dota2.com.cn/wapnews/sliderImagesData_v2.html?2807591037"
+
+#define DTInformation_Whole_List_url @"http://www.dota2.com.cn/wapnews/hotnewsList.html?1458106104.310272"
+
+#define DTInformation_Official_List_url @"http://www.dota2.com.cn/wapnews/govnews/index.html?1458106722.195518"
+
+#define DTInformation_Update_List_url @"http://www.dota2.com.cn/wapnews/vernews/index.html?1458106814.153461"
+
+#define DTInformation_Media_List_url @"http://www.dota2.com.cn/wapnews/medianews/index.html?1458106856.523986"
+
+#define DTInforMation_Match_List_url @"http://www.dota2.com.cn/wapnews/matchnews/index.html?1458106908.888009"
+
+#define DTInformation_detail_url @"http://www.dota2.com.cn/wapnews/article/details/20160315/"
+// http://www.dota2.com.cn/wapnews/article/details/20160315/183021.html
+
+
 
 #endif /* DTPrefixHeader_pch */

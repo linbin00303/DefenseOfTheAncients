@@ -19,6 +19,11 @@
 		50C78DC51C98FA5300F23D9F /* DTMatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50C78DC31C98FA5300F23D9F /* DTMatchViewController.xib */; };
 		50C78DC91C990E6A00F23D9F /* DTInformationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C78DC71C990E6A00F23D9F /* DTInformationCell.m */; };
 		50C78DCA1C990E6A00F23D9F /* DTInformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50C78DC81C990E6A00F23D9F /* DTInformationCell.xib */; };
+		50C78DCD1C99373B00F23D9F /* DTApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C78DCC1C99373B00F23D9F /* DTApiManager.m */; };
+		50C78DD01C9940E600F23D9F /* DTAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C78DCF1C9940E600F23D9F /* DTAccount.m */; };
+		50C78DD31C99423F00F23D9F /* DTApiManager+DTInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C78DD21C99423F00F23D9F /* DTApiManager+DTInformation.m */; };
+		50C78DD61C994DB100F23D9F /* DTInformationModels.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C78DD51C994DB100F23D9F /* DTInformationModels.m */; };
+		50C78DD91C9959CF00F23D9F /* DTRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C78DD81C9959CF00F23D9F /* DTRefreshFooter.m */; };
 		50D201511C980CA700B99E3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D201501C980CA700B99E3B /* main.m */; };
 		50D201541C980CA700B99E3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D201531C980CA700B99E3B /* AppDelegate.m */; };
 		50D2015C1C980CA700B99E3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D2015B1C980CA700B99E3B /* Assets.xcassets */; };
@@ -79,6 +84,16 @@
 		50C78DC61C990E6A00F23D9F /* DTInformationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTInformationCell.h; sourceTree = "<group>"; };
 		50C78DC71C990E6A00F23D9F /* DTInformationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTInformationCell.m; sourceTree = "<group>"; };
 		50C78DC81C990E6A00F23D9F /* DTInformationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTInformationCell.xib; sourceTree = "<group>"; };
+		50C78DCB1C99373B00F23D9F /* DTApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTApiManager.h; sourceTree = "<group>"; };
+		50C78DCC1C99373B00F23D9F /* DTApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTApiManager.m; sourceTree = "<group>"; };
+		50C78DCE1C9940E600F23D9F /* DTAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTAccount.h; sourceTree = "<group>"; };
+		50C78DCF1C9940E600F23D9F /* DTAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTAccount.m; sourceTree = "<group>"; };
+		50C78DD11C99423F00F23D9F /* DTApiManager+DTInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DTApiManager+DTInformation.h"; sourceTree = "<group>"; };
+		50C78DD21C99423F00F23D9F /* DTApiManager+DTInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DTApiManager+DTInformation.m"; sourceTree = "<group>"; };
+		50C78DD41C994DB100F23D9F /* DTInformationModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTInformationModels.h; sourceTree = "<group>"; };
+		50C78DD51C994DB100F23D9F /* DTInformationModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTInformationModels.m; sourceTree = "<group>"; };
+		50C78DD71C9959CF00F23D9F /* DTRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRefreshFooter.h; sourceTree = "<group>"; };
+		50C78DD81C9959CF00F23D9F /* DTRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTRefreshFooter.m; sourceTree = "<group>"; };
 		50D2014C1C980CA700B99E3B /* DefenseOfTheAncients.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DefenseOfTheAncients.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D201501C980CA700B99E3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50D201521C980CA700B99E3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -232,6 +247,8 @@
 				50E0BCEA1C98588C0054283A /* UIImage+ColorImage.m */,
 				50E0BCEC1C9861320054283A /* DTRefreshHeader.h */,
 				50E0BCED1C9861320054283A /* DTRefreshHeader.m */,
+				50C78DD71C9959CF00F23D9F /* DTRefreshFooter.h */,
+				50C78DD81C9959CF00F23D9F /* DTRefreshFooter.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -244,6 +261,10 @@
 				50D201981C9815CA00B99E3B /* Game */,
 				50D201991C9815CA00B99E3B /* Mine */,
 				50D2019A1C9815CA00B99E3B /* Video */,
+				50C78DCB1C99373B00F23D9F /* DTApiManager.h */,
+				50C78DCC1C99373B00F23D9F /* DTApiManager.m */,
+				50C78DCE1C9940E600F23D9F /* DTAccount.h */,
+				50C78DCF1C9940E600F23D9F /* DTAccount.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -381,6 +402,8 @@
 		50D201961C9815CA00B99E3B /* Information */ = {
 			isa = PBXGroup;
 			children = (
+				50C78DD11C99423F00F23D9F /* DTApiManager+DTInformation.h */,
+				50C78DD21C99423F00F23D9F /* DTApiManager+DTInformation.m */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -423,6 +446,8 @@
 		50D2019C1C9815D000B99E3B /* Information */ = {
 			isa = PBXGroup;
 			children = (
+				50C78DD41C994DB100F23D9F /* DTInformationModels.h */,
+				50C78DD51C994DB100F23D9F /* DTInformationModels.m */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -667,6 +692,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50D201B81C98190900B99E3B /* DTVideoViewController.m in Sources */,
+				50C78DD31C99423F00F23D9F /* DTApiManager+DTInformation.m in Sources */,
 				50D201541C980CA700B99E3B /* AppDelegate.m in Sources */,
 				50D201BD1C98191900B99E3B /* DTGameViewController.m in Sources */,
 				50D201A91C9818E000B99E3B /* DTInformationViewController.m in Sources */,
@@ -675,9 +701,13 @@
 				50C78DC41C98FA5300F23D9F /* DTMatchViewController.m in Sources */,
 				50C78DB51C98FA0100F23D9F /* DTOfficialViewController.m in Sources */,
 				50C78DBA1C98FA1900F23D9F /* DTUpdateViewController.m in Sources */,
+				50C78DD61C994DB100F23D9F /* DTInformationModels.m in Sources */,
 				50E0BCEB1C98588C0054283A /* UIImage+ColorImage.m in Sources */,
 				50D201C11C9819C100B99E3B /* DTTabBarViewController.m in Sources */,
 				50C78DB01C98F9C900F23D9F /* DTWholeViewController.m in Sources */,
+				50C78DD91C9959CF00F23D9F /* DTRefreshFooter.m in Sources */,
+				50C78DD01C9940E600F23D9F /* DTAccount.m in Sources */,
+				50C78DCD1C99373B00F23D9F /* DTApiManager.m in Sources */,
 				50E0BCEE1C9861320054283A /* DTRefreshHeader.m in Sources */,
 				50D201511C980CA700B99E3B /* main.m in Sources */,
 				50E0BD131C986F670054283A /* DTNavigationBarView.m in Sources */,
