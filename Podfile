@@ -9,7 +9,7 @@ target 'DefenseOfTheAncients' do
    pod 'MJRefresh', '~> 3.1.0'
    pod 'MJExtension', '~> 3.0.10'
    pod 'HexColors', '~> 4.0.0'
-   pod 'Masonry', '~> 0.6.4'
+   pod 'WebViewJavascriptBridge', '~> 5.0'
 end
 
 target 'DefenseOfTheAncientsTests' do
