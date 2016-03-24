@@ -47,6 +47,10 @@
 		50E0BCEB1C98588C0054283A /* UIImage+ColorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E0BCEA1C98588C0054283A /* UIImage+ColorImage.m */; };
 		50E0BCEE1C9861320054283A /* DTRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E0BCED1C9861320054283A /* DTRefreshHeader.m */; };
 		50E0BD131C986F670054283A /* DTNavigationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E0BD121C986F670054283A /* DTNavigationBarView.m */; };
+		50F795401CA3FFC700389F5D /* DTTreasureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F7953E1CA3FFC700389F5D /* DTTreasureCell.m */; };
+		50F795411CA3FFC700389F5D /* DTTreasureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50F7953F1CA3FFC700389F5D /* DTTreasureCell.xib */; };
+		50F795441CA402FE00389F5D /* DTTreasureBoxModels.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F795431CA402FE00389F5D /* DTTreasureBoxModels.m */; };
+		50F795471CA404AF00389F5D /* DTApiManager+DTTreasureBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F795461CA404AF00389F5D /* DTApiManager+DTTreasureBox.m */; };
 		81E671B156185A5960519EBC /* libPods-DefenseOfTheAncients.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF1C12D8D8461CF15A5BD2F /* libPods-DefenseOfTheAncients.a */; };
 /* End PBXBuildFile section */
 
@@ -139,6 +143,13 @@
 		50E0BCED1C9861320054283A /* DTRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTRefreshHeader.m; sourceTree = "<group>"; };
 		50E0BD111C986F670054283A /* DTNavigationBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTNavigationBarView.h; sourceTree = "<group>"; };
 		50E0BD121C986F670054283A /* DTNavigationBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTNavigationBarView.m; sourceTree = "<group>"; };
+		50F7953D1CA3FFC700389F5D /* DTTreasureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTreasureCell.h; sourceTree = "<group>"; };
+		50F7953E1CA3FFC700389F5D /* DTTreasureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTreasureCell.m; sourceTree = "<group>"; };
+		50F7953F1CA3FFC700389F5D /* DTTreasureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTTreasureCell.xib; sourceTree = "<group>"; };
+		50F795421CA402FE00389F5D /* DTTreasureBoxModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTreasureBoxModels.h; sourceTree = "<group>"; };
+		50F795431CA402FE00389F5D /* DTTreasureBoxModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTreasureBoxModels.m; sourceTree = "<group>"; };
+		50F795451CA404AF00389F5D /* DTApiManager+DTTreasureBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DTApiManager+DTTreasureBox.h"; sourceTree = "<group>"; };
+		50F795461CA404AF00389F5D /* DTApiManager+DTTreasureBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DTApiManager+DTTreasureBox.m"; sourceTree = "<group>"; };
 		BDF1C12D8D8461CF15A5BD2F /* libPods-DefenseOfTheAncients.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DefenseOfTheAncients.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC288F6EE0BECE2A5E10332A /* Pods-DefenseOfTheAncients.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefenseOfTheAncients.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DefenseOfTheAncients/Pods-DefenseOfTheAncients.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -387,6 +398,9 @@
 		50D201921C9815C000B99E3B /* TreasureBox */ = {
 			isa = PBXGroup;
 			children = (
+				50F7953D1CA3FFC700389F5D /* DTTreasureCell.h */,
+				50F7953E1CA3FFC700389F5D /* DTTreasureCell.m */,
+				50F7953F1CA3FFC700389F5D /* DTTreasureCell.xib */,
 			);
 			path = TreasureBox;
 			sourceTree = "<group>";
@@ -424,6 +438,8 @@
 		50D201971C9815CA00B99E3B /* TreasureBox */ = {
 			isa = PBXGroup;
 			children = (
+				50F795451CA404AF00389F5D /* DTApiManager+DTTreasureBox.h */,
+				50F795461CA404AF00389F5D /* DTApiManager+DTTreasureBox.m */,
 			);
 			path = TreasureBox;
 			sourceTree = "<group>";
@@ -452,6 +468,8 @@
 		50D2019B1C9815D000B99E3B /* TreasureBox */ = {
 			isa = PBXGroup;
 			children = (
+				50F795421CA402FE00389F5D /* DTTreasureBoxModels.h */,
+				50F795431CA402FE00389F5D /* DTTreasureBoxModels.m */,
 			);
 			path = TreasureBox;
 			sourceTree = "<group>";
@@ -630,6 +648,7 @@
 				50D201BE1C98191900B99E3B /* DTGameViewController.xib in Resources */,
 				50D201AA1C9818E000B99E3B /* DTInformationViewController.xib in Resources */,
 				50D2015C1C980CA700B99E3B /* Assets.xcassets in Resources */,
+				50F795411CA3FFC700389F5D /* DTTreasureCell.xib in Resources */,
 				50D201B91C98190900B99E3B /* DTVideoViewController.xib in Resources */,
 				50C78DC01C98FA3A00F23D9F /* DTMediaViewController.xib in Resources */,
 				50D201AF1C9818F000B99E3B /* DTTreasureBoxViewController.xib in Resources */,
@@ -714,8 +733,10 @@
 				50D201B31C9818FD00B99E3B /* DTMineViewController.m in Sources */,
 				50C78DC41C98FA5300F23D9F /* DTMatchViewController.m in Sources */,
 				50C78DB51C98FA0100F23D9F /* DTOfficialViewController.m in Sources */,
+				50F795401CA3FFC700389F5D /* DTTreasureCell.m in Sources */,
 				50C78DBA1C98FA1900F23D9F /* DTUpdateViewController.m in Sources */,
 				50C78DD61C994DB100F23D9F /* DTInformationModels.m in Sources */,
+				50F795471CA404AF00389F5D /* DTApiManager+DTTreasureBox.m in Sources */,
 				50E0BCEB1C98588C0054283A /* UIImage+ColorImage.m in Sources */,
 				50D201C11C9819C100B99E3B /* DTTabBarViewController.m in Sources */,
 				50C78DB01C98F9C900F23D9F /* DTWholeViewController.m in Sources */,
@@ -724,6 +745,7 @@
 				50C78DD01C9940E600F23D9F /* DTAccount.m in Sources */,
 				50C78DCD1C99373B00F23D9F /* DTApiManager.m in Sources */,
 				50BC9ACD1C99AFD600C1EB78 /* DTInformationDetailViewController.m in Sources */,
+				50F795441CA402FE00389F5D /* DTTreasureBoxModels.m in Sources */,
 				50E0BCEE1C9861320054283A /* DTRefreshHeader.m in Sources */,
 				50D201511C980CA700B99E3B /* main.m in Sources */,
 				50E0BD131C986F670054283A /* DTNavigationBarView.m in Sources */,

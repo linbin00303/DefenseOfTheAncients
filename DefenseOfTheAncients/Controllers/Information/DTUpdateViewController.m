@@ -9,10 +9,10 @@
 #import "DTApiManager+DTInformation.h"
 #import "DTApiManager.h"
 #import "DTInformationCell.h"
+#import "DTInformationDetailViewController.h"
 #import "DTRefreshFooter.h"
 #import "DTRefreshHeader.h"
 #import "DTUpdateViewController.h"
-#import "DTInformationDetailViewController.h"
 
 @interface DTUpdateViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -63,9 +63,9 @@
     return 102.0f;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    DTInformationModels *item =self.dataSource[indexPath.row];
-    DTInformationDetailViewController *detailVC = [[DTInformationDetailViewController alloc]init];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    DTInformationModels *item = self.dataSource[indexPath.row];
+    DTInformationDetailViewController *detailVC = [[DTInformationDetailViewController alloc] init];
     detailVC.deatilUrl = item.url;
     detailVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:detailVC animated:YES];

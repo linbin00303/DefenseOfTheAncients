@@ -8,8 +8,8 @@
 
 #import "DTAccount.h"
 
-NSString *const kAccountUidKey = @"gm_uid";
-NSString *const kAccountTokenKey = @"gm_token";
+NSString *const kAccountUidKey = @"dt_uid";
+NSString *const kAccountTokenKey = @"dt_token";
 
 @implementation DTAccount
 
