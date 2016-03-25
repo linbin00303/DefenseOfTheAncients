@@ -8,8 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import <MJExtension/MJExtension.h>
+@class DTAgendasModel;
 
-@interface DTGameModel : NSObject
+@interface DTGameHomeModel: NSObject
+
+@property (nonatomic, strong)NSString *date;
+@property (nonatomic, strong)NSArray * agendas;
+
+@end
+
+@interface DTAgendasModel : NSObject
 
 @property (nonatomic, strong) NSNumber *competitionEventId;
 @property (nonatomic, strong) NSString *competitionEventName;

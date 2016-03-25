@@ -21,6 +21,7 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - HexColors (4.0.0)
+  - Masonry (0.6.4)
   - MJExtension (3.0.10)
   - MJRefresh (3.1.0)
   - MMProgressHUD (0.3.2)
@@ -29,6 +30,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 2.5.3)
   - HexColors (~> 4.0.0)
+  - Masonry (~> 0.6.4)
   - MJExtension (~> 3.0.10)
   - MJRefresh (~> 3.1.0)
   - MMProgressHUD (~> 0.3.2)
@@ -37,6 +39,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   HexColors: 5f95843ef89aff6a72e1fd3a8ebabf205cc43379
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
   MMProgressHUD: a913b116ba6791d67d37f9fb4211079200fb7595

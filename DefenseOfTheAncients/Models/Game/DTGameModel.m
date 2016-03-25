@@ -8,6 +8,10 @@
 
 #import "DTGameModel.h"
 
-@implementation DTGameModel
+@implementation DTGameHomeModel
+
+@end
+
+@implementation DTAgendasModel
 
 @end
