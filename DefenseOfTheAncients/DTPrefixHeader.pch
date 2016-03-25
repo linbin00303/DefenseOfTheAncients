@@ -47,5 +47,12 @@
 
 #define DTTreasureBox_List_url @"http://www.dota2.com.cn/wapnews/baoheListData.html?1458147729.821926"
 
+//赛事
+//http://msgpush.dota2.com.cn/carry6/competition/agenda?appid=wanmeidota2&page=1&sig=52b64c1227008ad4cea7c034c543c73a
+
+
+//直播二级
+//http://msgpush.dota2.com.cn/api/public/video/douyu/roomInfo?app_id=wanmeidota2&roomId=64609&sig=963fdb7d01b4873069cdd2ec2d193b4e
+
 
 #endif /* DTPrefixHeader_pch */

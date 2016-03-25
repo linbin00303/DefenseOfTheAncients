@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5012A3821CA4DEA100A36317 /* DTGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5012A3811CA4DEA100A36317 /* DTGameModel.m */; };
+		5012A3851CA4E05800A36317 /* DTApiManager+DTGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5012A3841CA4E05800A36317 /* DTApiManager+DTGame.m */; };
 		50BC9ACD1C99AFD600C1EB78 /* DTInformationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BC9ACB1C99AFD600C1EB78 /* DTInformationDetailViewController.m */; };
 		50BC9ACE1C99AFD600C1EB78 /* DTInformationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50BC9ACC1C99AFD600C1EB78 /* DTInformationDetailViewController.xib */; };
 		50BC9AD11C99BA9C00C1EB78 /* DTNavItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BC9AD01C99BA9C00C1EB78 /* DTNavItems.m */; };
@@ -73,6 +75,10 @@
 
 /* Begin PBXFileReference section */
 		2552A424E99AADA6CBB17849 /* Pods-DefenseOfTheAncients.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefenseOfTheAncients.release.xcconfig"; path = "Pods/Target Support Files/Pods-DefenseOfTheAncients/Pods-DefenseOfTheAncients.release.xcconfig"; sourceTree = "<group>"; };
+		5012A3801CA4DEA100A36317 /* DTGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGameModel.h; sourceTree = "<group>"; };
+		5012A3811CA4DEA100A36317 /* DTGameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTGameModel.m; sourceTree = "<group>"; };
+		5012A3831CA4E05800A36317 /* DTApiManager+DTGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DTApiManager+DTGame.h"; sourceTree = "<group>"; };
+		5012A3841CA4E05800A36317 /* DTApiManager+DTGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DTApiManager+DTGame.m"; sourceTree = "<group>"; };
 		50BC9ACA1C99AFD600C1EB78 /* DTInformationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTInformationDetailViewController.h; sourceTree = "<group>"; };
 		50BC9ACB1C99AFD600C1EB78 /* DTInformationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTInformationDetailViewController.m; sourceTree = "<group>"; };
 		50BC9ACC1C99AFD600C1EB78 /* DTInformationDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTInformationDetailViewController.xib; sourceTree = "<group>"; };
@@ -447,6 +453,8 @@
 		50D201981C9815CA00B99E3B /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				5012A3831CA4E05800A36317 /* DTApiManager+DTGame.h */,
+				5012A3841CA4E05800A36317 /* DTApiManager+DTGame.m */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -500,6 +508,8 @@
 		50D2019F1C9815D000B99E3B /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				5012A3801CA4DEA100A36317 /* DTGameModel.h */,
+				5012A3811CA4DEA100A36317 /* DTGameModel.m */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -731,6 +741,7 @@
 				50D201A91C9818E000B99E3B /* DTInformationViewController.m in Sources */,
 				50D201AE1C9818F000B99E3B /* DTTreasureBoxViewController.m in Sources */,
 				50D201B31C9818FD00B99E3B /* DTMineViewController.m in Sources */,
+				5012A3821CA4DEA100A36317 /* DTGameModel.m in Sources */,
 				50C78DC41C98FA5300F23D9F /* DTMatchViewController.m in Sources */,
 				50C78DB51C98FA0100F23D9F /* DTOfficialViewController.m in Sources */,
 				50F795401CA3FFC700389F5D /* DTTreasureCell.m in Sources */,
@@ -747,6 +758,7 @@
 				50BC9ACD1C99AFD600C1EB78 /* DTInformationDetailViewController.m in Sources */,
 				50F795441CA402FE00389F5D /* DTTreasureBoxModels.m in Sources */,
 				50E0BCEE1C9861320054283A /* DTRefreshHeader.m in Sources */,
+				5012A3851CA4E05800A36317 /* DTApiManager+DTGame.m in Sources */,
 				50D201511C980CA700B99E3B /* main.m in Sources */,
 				50E0BD131C986F670054283A /* DTNavigationBarView.m in Sources */,
 				50C78DC91C990E6A00F23D9F /* DTInformationCell.m in Sources */,

@@ -29,14 +29,20 @@
 
 - (void)fetchDataUsingMethod:(NSString *)httpMethod
                      apiPath:(NSString *)path
+                 BaseUrlType:(NSInteger)urlType
                   succBlocks:(void (^)(NSDictionary *))succBlocks
                   failBlocks:(void (^)(NSError *))failBlocks {
     if (!_reqManager) {
         _reqManager = [AFHTTPRequestOperationManager manager];
         _reqManager.responseSerializer = [AFHTTPResponseSerializer serializer];
     }
-    NSString *apiUrl = [NSString stringWithFormat:kApiBaseUrl, path];
-    
+    NSString *apiUrl;
+    if (urlType == 1) {
+         apiUrl= [NSString stringWithFormat:kApiBaseUrl, path];
+    }else if (urlType == 2){
+         apiUrl = [NSString stringWithFormat:mApiBaseUrl, path];
+    }
+
     NSError *error;
     NSMutableURLRequest *req = [_reqManager.requestSerializer requestWithMethod:httpMethod URLString:apiUrl parameters:nil error:&error];
     AFHTTPRequestOperation *reqOp = [[AFHTTPRequestOperation alloc] initWithRequest:req];
@@ -44,7 +50,7 @@
       NSDictionary *data = [self extractDataFromResponseObject:responseObject];
       if (data.count) {
           succBlocks(data);
-      }else {
+      } else {
           failBlocks([NSError errorWithDomain:@"返回数据为空" code:-1 userInfo:nil]);
       }
     }

@@ -11,23 +11,23 @@
 
 @implementation DTApiManager (DTTreasureBox)
 
--(void)requestBaoheListDataSuccBlocks:(void (^)(NSArray *))succBlocks failBlocks:(void (^)(NSError *))failBlocks{
+- (void)requestBaoheListDataSuccBlocks:(void (^)(NSArray *))succBlocks failBlocks:(void (^)(NSError *))failBlocks {
     ApiRequestSuccBlock theSuccBlock = ^(NSDictionary *data) {
-        NSArray *rawItems = [data objectForKey:@"data"];
-        NSMutableDictionary *baoheDic = [rawItems firstObject];
-        NSArray * array = baoheDic[@"list"];
-        NSMutableArray *items = [NSMutableArray arrayWithCapacity:array.count];
-        for (NSDictionary *item in array) {
-            DTTreasureBoxModels *HotItem = [DTTreasureBoxModels mj_objectWithKeyValues:item];
-            [items addObject:HotItem];
-        }
-        succBlocks(items);
+      NSArray *rawItems = [data objectForKey:@"data"];
+      NSMutableDictionary *baoheDic = [rawItems firstObject];
+      NSArray *array = baoheDic[@"list"];
+      NSMutableArray *items = [NSMutableArray arrayWithCapacity:array.count];
+      for (NSDictionary *item in array) {
+          DTTreasureBoxModels *treasureBoxItem = [DTTreasureBoxModels mj_objectWithKeyValues:item];
+          [items addObject:treasureBoxItem];
+      }
+      succBlocks(items);
     };
     [self fetchDataUsingMethod:@"GET"
                        apiPath:[NSString stringWithFormat:@"wapnews/baoheListData.html"]
+                   BaseUrlType:1
                     succBlocks:theSuccBlock
                     failBlocks:failBlocks];
-
 }
 
 @end
