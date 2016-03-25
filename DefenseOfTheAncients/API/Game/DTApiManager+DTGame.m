@@ -22,7 +22,7 @@
       succBlocks(items);
     };
     [self fetchDataUsingMethod:@"GET"
-                       apiPath:[NSString stringWithFormat:@"carry6/competition/agenda?appid=wanmeidota2&page=2&sig=52b64c1227008ad4cea7c034c543c73a"]
+                       apiPath:[NSString stringWithFormat:@"carry6/competition/agenda?appid=wanmeidota2&page=1&sig=52b64c1227008ad4cea7c034c543c73a"]
                    BaseUrlType:2
                     succBlocks:theSuccBlock
                     failBlocks:failBlocks];

@@ -5,22 +5,14 @@
 //  Created by Mr.Yao on 16/3/15.
 //  Copyright © 2016年 Mr.Yao. All rights reserved.
 //
-
-#import "DTApiManager+DTGame.h"
-#import "DTApiManager.h"
-#import "DTGameModel.h"
 #import "DTGameViewController.h"
-#import "DTRefreshFooter.h"
-#import "DTRefreshHeader.h"
-#import "DTScheduleTableViewCell.h"
-#import "DTGameTool.h"
+#import "DTNavigationBarView.h"
+#import "DTScheduleViewController.h"
 
-@interface DTGameViewController () <UITableViewDelegate, UITableViewDataSource>
-
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) NSMutableArray *dataSource;
-@property (nonatomic, assign) NSInteger pageIndex;
-
+@interface DTGameViewController () <UIScrollViewDelegate>
+@property (nonatomic, retain) DTNavigationBarView *naTabView;
+@property (nonatomic, retain) UIScrollView *scrollViewDown;
+@property (nonatomic, retain) NSArray *arr;
 @end
 
 @implementation DTGameViewController
@@ -28,80 +20,62 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUpViews];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    [self addChildViewControllerToScroller];
+
 }
+
+#pragma mark - Getters & Setters
+
+- (UIScrollView *)scrollViewDown {
+    if (!_scrollViewDown) {
+        self.scrollViewDown = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+        self.scrollViewDown.contentSize = CGSizeMake(kScreenWidth * 3, 0);
+        self.scrollViewDown.pagingEnabled = YES;
+        self.scrollViewDown.bounces = NO;
+        self.scrollViewDown.delegate = self;
+        [self.view addSubview:self.scrollViewDown];
+    }
+    return _scrollViewDown;
+}
+
+#pragma mark - init Views
 
 - (void)setUpViews {
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([DTScheduleTableViewCell class]) bundle:nil]
-         forCellReuseIdentifier:kDTScheduleTableViewCellIdentifier];
-    __weak typeof(self) weakSelf = self;
-    self.tableView.mj_header = [DTRefreshHeader headerWithRefreshingBlock:^{
-      self.pageIndex = 1;
-      [weakSelf requestDataSource];
-    }];
-
-    [self.tableView.mj_header beginRefreshing];
-    self.tableView.mj_footer = [DTRefreshFooter footerWithRefreshingBlock:^{
-      weakSelf.pageIndex++;
-      [self requestDataSource];
-    }];
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.arr = @[ @"赛程", @"赛事", @"战队" ];
+    self.navigationController.navigationBar.barTintColor = [UIColor blueColor];
+    self.navigationController.navigationBar.translucent = NO;
+    self.naTabView = [[DTNavigationBarView alloc] initWithFrame:CGRectMake(0, 20, kScreenWidth, 40) withWidth:kScreenWidth withArray:self.arr];
+    self.navigationItem.titleView = self.naTabView;
+    self.scrollViewDown.contentOffset = CGPointMake(0, 0);
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deliverValue:) name:@"DTNavigationBarView" object:nil];
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.dataSource.count;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    DTGameHomeModel *gameItem = self.dataSource[section];
-    return gameItem.agendas.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    DTScheduleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kDTScheduleTableViewCellIdentifier];
-    DTGameHomeModel *gameItem = self.dataSource[indexPath.section];
-    [cell setUpDTScheduleTableViewCellViewsWithAgendasModel:gameItem.agendas[indexPath.row]];
-    return cell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 120;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    DTGameHomeModel *gameItem = self.dataSource[section];
+- (void)addChildViewControllerToScroller {
+    DTScheduleViewController *ScheduleVC = [[DTScheduleViewController alloc] init];
     
-    return [DTGameTool createSectionheaderWithTitleString:gameItem.date];
+    [self addChildViewController:ScheduleVC];
+    
+    ScheduleVC.view.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight - 64 - 44);
+   
+    
+    [self.scrollViewDown addSubview:ScheduleVC.view];
+
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 40;
+#pragma mark - NSNotificationCenter selector
+
+- (void)deliverValue:(NSNotification *)notification {
+    NSString *str = [notification object];
+    CGFloat temp = [str intValue];
+    self.scrollViewDown.contentOffset = CGPointMake(temp * kScreenWidth, 0);
 }
 
-- (void)requestDataSource {
-    if (!self.dataSource) {
-        self.dataSource = [[NSMutableArray alloc] init];
-    }
-    [[DTApiManager sharedApiManager] requestGameHomeDatasourceSuccBlocks:^(NSArray *gameItems) {
-      if (self.pageIndex == 1) {
-          [self.dataSource removeAllObjects];
-      }
-      [self.dataSource addObjectsFromArray:gameItems];
-      [self.tableView reloadData];
-      [self stopRefreshing];
-    }
-        failBlocks:^(NSError *error) {
-          [self stopRefreshing];
-        }];
-}
+#pragma mark - ScrollDelegate
 
-- (void)stopRefreshing {
-    if ([self.tableView.mj_header isRefreshing]) {
-        [self.tableView.mj_header endRefreshing];
-    }
-    if ([self.tableView.mj_footer isRefreshing]) {
-        [self.tableView.mj_footer endRefreshing];
-    }
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self.naTabView deliver:scrollView];
 }
 
 - (void)didReceiveMemoryWarning {

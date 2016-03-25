@@ -14,8 +14,9 @@
 + (UIView *)createSectionheaderWithTitleString:(NSString *)title {
     UIView *sectionView = [[UIView alloc] init];
     sectionView.frame = CGRectMake(0, 0, kScreenWidth, 40);
-    sectionView.backgroundColor = [UIColor whiteColor];
+    sectionView.backgroundColor = [HXColor hx_colorWithHexRGBAString:@"e2e2e2"];
     UILabel *titleLabel = [[UILabel alloc] init];
+    titleLabel.font = [UIFont systemFontOfSize:13];
     [sectionView addSubview:titleLabel];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
       make.left.equalTo(sectionView);

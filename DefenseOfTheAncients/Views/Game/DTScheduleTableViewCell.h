@@ -21,6 +21,7 @@ static NSString *const kDTScheduleTableViewCellIdentifier = @"DTScheduleTableVie
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *gameFractionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *remindButton;
+@property (weak, nonatomic) IBOutlet UILabel *lineLabel;
 
 - (void)setUpDTScheduleTableViewCellViewsWithAgendasModel:(DTAgendasModel *)item;
 

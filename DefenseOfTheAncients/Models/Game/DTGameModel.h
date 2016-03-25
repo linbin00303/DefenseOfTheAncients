@@ -10,10 +10,10 @@
 #import <MJExtension/MJExtension.h>
 @class DTAgendasModel;
 
-@interface DTGameHomeModel: NSObject
+@interface DTGameHomeModel : NSObject
 
-@property (nonatomic, strong)NSString *date;
-@property (nonatomic, strong)NSArray * agendas;
+@property (nonatomic, strong) NSString *date;
+@property (nonatomic, strong) NSArray *agendas;
 
 @end
 
@@ -27,7 +27,7 @@
 @property (nonatomic, strong) NSString *startDate;
 @property (nonatomic, strong) NSString *startHourMin;
 @property (nonatomic, strong) NSString *startWeekDay;
-@property (nonatomic, strong) NSNumber *status;
+@property (nonatomic, assign) NSInteger status;
 @property (nonatomic, strong) NSString *team1Icon;
 @property (nonatomic, strong) NSNumber *team1Id;
 @property (nonatomic, strong) NSString *team1Name;
