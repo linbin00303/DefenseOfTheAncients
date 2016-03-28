@@ -13,4 +13,6 @@
 
 - (void)requestGameHomeDatasourceSuccBlocks:(void (^)(NSArray *gameItems))succBlocks failBlocks:(void (^)(NSError *error))failBlocks;
 
+- (void)requestGmaeMatchDataSourceBlocks:(void (^)(NSArray *matchItems))succBlocks failBlocks:(void (^)(NSError *error))failBlocks;
+
 @end

@@ -28,4 +28,23 @@
                     failBlocks:failBlocks];
 }
 
+
+-(void)requestGmaeMatchDataSourceBlocks:(void (^)(NSArray *))succBlocks failBlocks:(void (^)(NSError *))failBlocks{
+    ApiRequestSuccBlock theSuccBlock = ^(NSDictionary *data) {
+        NSArray *rawItems = [data objectForKey:@"data"];
+        NSMutableArray *items = [NSMutableArray arrayWithCapacity:rawItems.count];
+        for (NSDictionary *item in rawItems) {
+            DTGameMatchModel *gameItem = [DTGameMatchModel mj_objectWithKeyValues:item];
+            [items addObject:gameItem];
+        }
+        succBlocks(items);
+    };
+    [self fetchDataUsingMethod:@"GET"
+                       apiPath:[NSString stringWithFormat:@"carry6/competition/api?apiName=competitionEvent_list&appid=wanmeidota2&category=1&page=1&sig=7622b3086dd1a28b8d39edfc2ff61cd6&size=20"]
+                   BaseUrlType:2
+                    succBlocks:theSuccBlock
+                    failBlocks:failBlocks];
+
+}
+
 @end

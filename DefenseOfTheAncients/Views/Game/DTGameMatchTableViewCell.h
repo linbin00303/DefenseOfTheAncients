@@ -10,7 +10,9 @@
 
 static NSString *const kDTGameMatchTableViewCellIdentifier = @"DTGameMatchTableViewCell";
 
-
 @interface DTGameMatchTableViewCell : UITableViewCell
+
+
+
 
 @end

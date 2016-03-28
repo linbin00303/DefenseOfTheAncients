@@ -15,3 +15,7 @@
 @implementation DTAgendasModel
 
 @end
+
+@implementation DTGameMatchModel
+
+@end

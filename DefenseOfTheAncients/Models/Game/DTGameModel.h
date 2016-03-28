@@ -38,3 +38,22 @@
 @property (nonatomic, assign) NSInteger team2Score;
 
 @end
+
+@interface DTGameMatchModel : NSObject
+
+@property (nonatomic, assign) NSInteger firstAward;
+@property (nonatomic, strong) NSString *gameVersion;
+@property (nonatomic, strong) NSString *icon;
+@property (nonatomic, assign) NSInteger id;
+@property (nonatomic, strong) NSString *location;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *organizer;
+@property (nonatomic, strong) NSString *qualityList;
+@property (nonatomic, assign) NSInteger secondAward;
+@property (nonatomic, assign) NSInteger startTime;
+@property (nonatomic, strong) NSString *startTimeStr;
+@property (nonatomic, assign) NSInteger satus;
+@property (nonatomic, assign) NSInteger thirdAward;
+@property (nonatomic, assign) NSInteger totalAward;
+
+@end
