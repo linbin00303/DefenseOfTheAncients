@@ -10,12 +10,14 @@
 
 @implementation DTSegmentedControl
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)setFrame:(CGRect)frame {
+    [super setFrame:frame];
+    self.tintColor = [UIColor clearColor];
+    NSDictionary *selectedTextAttributes = @{NSFontAttributeName : [UIFont boldSystemFontOfSize:17], NSForegroundColorAttributeName : [UIColor whiteColor]};
+    [self setTitleTextAttributes:selectedTextAttributes forState:UIControlStateSelected]; //设置文字属性
+    NSDictionary *unselectedTextAttributes =
+        @{NSFontAttributeName : [UIFont boldSystemFontOfSize:16], NSForegroundColorAttributeName : [UIColor redColor]};
+    [self setTitleTextAttributes:unselectedTextAttributes forState:UIControlStateNormal];
 }
-*/
 
 @end
