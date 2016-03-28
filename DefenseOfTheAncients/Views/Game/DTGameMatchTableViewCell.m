@@ -7,11 +7,19 @@
 //
 
 #import "DTGameMatchTableViewCell.h"
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 @implementation DTGameMatchTableViewCell
 
 - (void)awakeFromNib {
-    // Initialization code
+}
+
+- (void)setUpGameMatchCellViewsWithDTGameMatchItem:(DTGameMatchModel *)item {
+    [self.headImageView setImageWithURL:[NSURL URLWithString:item.icon]];
+    self.titleLabel.text = item.name;
+    [self.contentView bringSubviewToFront:self.styleLabel];
+    self.timtLabel.text = item.startTimeStr;
+    self.locationLabel.text = item.location;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
