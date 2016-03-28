@@ -10,6 +10,7 @@
 
 @interface DTInformationDetailViewController : UIViewController
 
-@property (nonatomic, strong) NSString * deatilUrl;
+@property (nonatomic, strong) NSString *deatilUrl;
+@property (nonatomic, strong) NSString *titleName;
 
 @end

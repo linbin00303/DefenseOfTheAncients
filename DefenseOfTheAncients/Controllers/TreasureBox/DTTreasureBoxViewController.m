@@ -11,6 +11,7 @@
 #import "DTTreasureBoxViewController.h"
 #import "DTTreasureCell.h"
 #import "DTNavItems.h"
+#import "DTInformationDetailViewController.h"
 
 @interface DTTreasureBoxViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -71,6 +72,15 @@
                   layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return CGSizeMake(105,110);
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    DTTreasureBoxModels *item = self.dataSource[indexPath.row];
+    DTInformationDetailViewController *detailVC = [[DTInformationDetailViewController alloc]init];
+    detailVC.deatilUrl =item.url;
+    detailVC.titleName = item.title;
+    detailVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 

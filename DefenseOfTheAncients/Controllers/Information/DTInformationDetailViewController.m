@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.leftBarButtonItems = [DTNavItems backButtonItemWithTarget:self.navigationController action:@selector(popViewControllerAnimated:)];
-    self.navigationItem.titleView = [DTNavItems titleViewWithText:@"资讯详情"];
+    self.navigationItem.titleView = [DTNavItems titleViewWithText:self.titleName.length?self.titleName:@"资讯详情"];
     [WebViewJavascriptBridge enableLogging];
     
     self.bridge = [WebViewJavascriptBridge bridgeForWebView:_webView];
