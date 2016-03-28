@@ -1,32 +1,32 @@
 //
-//  DTMatchViewController.m
+//  DTInformationMatchViewController.m
 //  DefenseOfTheAncients
 //
-//  Created by Mr.Yao on 16/3/16.
+//  Created by Mr.Yao on 16/3/28.
 //  Copyright © 2016年 Mr.Yao. All rights reserved.
 //
+
+#import "DTInformationDetailViewController.h"
+#import "DTInformationMatchViewController.h"
+#import "DTRefreshFooter.h"
+#import "DTRefreshHeader.h"
 
 #import "DTApiManager+DTInformation.h"
 #import "DTApiManager.h"
 #import "DTInformationCell.h"
-#import "DTMatchViewController.h"
-#import "DTRefreshFooter.h"
-#import "DTRefreshHeader.h"
-#import "DTInformationDetailViewController.h"
-
-@interface DTMatchViewController () <UITableViewDataSource, UITableViewDelegate>
-
+@interface DTInformationMatchViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (assign, nonatomic) NSInteger pageIndex;
 @property (strong, nonatomic) NSMutableArray *dataSource;
-
 @end
 
-@implementation DTMatchViewController
+@implementation DTInformationMatchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUpViews];
+
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)requestDataSource {
@@ -63,9 +63,9 @@
     return 102.0f;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    DTInformationModels *item =self.dataSource[indexPath.row];
-    DTInformationDetailViewController *detailVC = [[DTInformationDetailViewController alloc]init];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    DTInformationModels *item = self.dataSource[indexPath.row];
+    DTInformationDetailViewController *detailVC = [[DTInformationDetailViewController alloc] init];
     detailVC.deatilUrl = item.url;
     detailVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:detailVC animated:YES];
@@ -107,5 +107,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

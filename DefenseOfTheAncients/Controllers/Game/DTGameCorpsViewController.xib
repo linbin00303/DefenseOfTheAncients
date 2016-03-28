@@ -18,23 +18,37 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CnK-Dz-Cxk">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                     <subviews>
-                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JN4-ho-cLR" customClass="DTSegmentedControl">
-                            <rect key="frame" x="10" y="11" width="300" height="29"/>
-                            <segments>
-                                <segment title="热门"/>
-                                <segment title="中国"/>
-                                <segment title="东南亚"/>
-                                <segment title="美洲"/>
-                                <segment title="欧洲"/>
-                            </segments>
-                        </segmentedControl>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jHO-8T-eXh">
+                            <rect key="frame" x="10" y="7.5" width="300" height="35"/>
+                            <subviews>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JN4-ho-cLR" customClass="DTSegmentedControl">
+                                    <rect key="frame" x="1" y="1" width="298" height="34"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <segments>
+                                        <segment title="热门"/>
+                                        <segment title="中国"/>
+                                        <segment title="东南亚"/>
+                                        <segment title="美洲"/>
+                                        <segment title="欧洲"/>
+                                    </segments>
+                                </segmentedControl>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="JN4-ho-cLR" firstAttribute="top" secondItem="jHO-8T-eXh" secondAttribute="top" constant="1" id="GR2-u6-fnV"/>
+                                <constraint firstItem="JN4-ho-cLR" firstAttribute="leading" secondItem="jHO-8T-eXh" secondAttribute="leading" constant="1" id="QvW-tY-SG9"/>
+                                <constraint firstAttribute="trailing" secondItem="JN4-ho-cLR" secondAttribute="trailing" constant="1" id="U8Z-79-J7o"/>
+                                <constraint firstAttribute="height" constant="35" id="bxs-VW-fyC"/>
+                                <constraint firstAttribute="bottom" secondItem="JN4-ho-cLR" secondAttribute="bottom" constant="1" id="dLU-2p-YKV"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" red="0.85882352939999995" green="0.85882352939999995" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="JN4-ho-cLR" firstAttribute="leading" secondItem="CnK-Dz-Cxk" secondAttribute="leading" constant="10" id="46D-9D-zmb"/>
-                        <constraint firstItem="JN4-ho-cLR" firstAttribute="centerY" secondItem="CnK-Dz-Cxk" secondAttribute="centerY" id="Em5-5w-gZQ"/>
+                        <constraint firstItem="jHO-8T-eXh" firstAttribute="centerY" secondItem="CnK-Dz-Cxk" secondAttribute="centerY" id="Obe-Eb-CmB"/>
+                        <constraint firstAttribute="trailing" secondItem="jHO-8T-eXh" secondAttribute="trailing" constant="10" id="Uyx-gY-wjN"/>
                         <constraint firstAttribute="height" constant="50" id="Yva-84-7n2"/>
-                        <constraint firstAttribute="trailing" secondItem="JN4-ho-cLR" secondAttribute="trailing" constant="10" id="eLE-1E-lPq"/>
+                        <constraint firstItem="jHO-8T-eXh" firstAttribute="leading" secondItem="CnK-Dz-Cxk" secondAttribute="leading" constant="10" id="slA-o6-shS"/>
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Yn4-h2-3cS">

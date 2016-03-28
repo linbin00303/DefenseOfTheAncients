@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DTGameMatchViewController">
             <connections>
+                <outlet property="tableView" destination="sux-lz-LKs" id="7LC-bL-ZwY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,23 +23,36 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzG-cH-In7">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                     <subviews>
-                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iIc-6o-yws" customClass="DTSegmentedControl">
-                            <rect key="frame" x="10" y="11" width="300" height="29"/>
-                            <segments>
-                                <segment title=" 高端组"/>
-                                <segment title="职业组"/>
-                                <segment title="业余组"/>
-                                <segment title="完美赛事"/>
-                            </segments>
-                        </segmentedControl>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bUp-mw-Ygg">
+                            <rect key="frame" x="10" y="7.5" width="300" height="35"/>
+                            <subviews>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iIc-6o-yws" customClass="DTSegmentedControl">
+                                    <rect key="frame" x="1" y="1" width="298" height="34"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <segments>
+                                        <segment title=" 高端组"/>
+                                        <segment title="职业组"/>
+                                        <segment title="业余组"/>
+                                        <segment title="完美赛事"/>
+                                    </segments>
+                                </segmentedControl>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="iIc-6o-yws" secondAttribute="bottom" constant="1" id="4q5-Gb-dO0"/>
+                                <constraint firstItem="iIc-6o-yws" firstAttribute="leading" secondItem="bUp-mw-Ygg" secondAttribute="leading" constant="1" id="Ir1-xY-F4K"/>
+                                <constraint firstItem="iIc-6o-yws" firstAttribute="top" secondItem="bUp-mw-Ygg" secondAttribute="top" constant="1" id="PIB-VR-reH"/>
+                                <constraint firstAttribute="height" constant="35" id="Zx5-F2-HIa"/>
+                                <constraint firstAttribute="trailing" secondItem="iIc-6o-yws" secondAttribute="trailing" constant="1" id="tk5-5j-icv"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" red="0.85882352941176465" green="0.85882352941176465" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="iIc-6o-yws" secondAttribute="trailing" constant="10" id="A5r-ln-9de"/>
                         <constraint firstAttribute="height" constant="50" id="KtZ-SO-mUJ"/>
-                        <constraint firstItem="iIc-6o-yws" firstAttribute="leading" secondItem="dzG-cH-In7" secondAttribute="leading" constant="10" id="OlT-gr-z5c"/>
-                        <constraint firstItem="iIc-6o-yws" firstAttribute="centerY" secondItem="dzG-cH-In7" secondAttribute="centerY" id="dN1-Kv-NvH"/>
-                        <constraint firstItem="iIc-6o-yws" firstAttribute="centerX" secondItem="dzG-cH-In7" secondAttribute="centerX" id="p7z-DD-egY"/>
+                        <constraint firstAttribute="trailing" secondItem="bUp-mw-Ygg" secondAttribute="trailing" constant="10" id="Tez-YZ-4WY"/>
+                        <constraint firstItem="bUp-mw-Ygg" firstAttribute="centerY" secondItem="dzG-cH-In7" secondAttribute="centerY" id="bBT-gY-fQ0"/>
+                        <constraint firstItem="bUp-mw-Ygg" firstAttribute="leading" secondItem="dzG-cH-In7" secondAttribute="leading" constant="10" id="qMs-AY-0w1"/>
                     </constraints>
                 </view>
             </subviews>
