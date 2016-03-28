@@ -13,7 +13,6 @@
 @property (nonatomic, assign) CGFloat viewWidth;
 @property (nonatomic, assign) CGFloat viewHeight;
 @property (nonatomic, retain) UIScrollView *scrollViewTop;
-@property (nonatomic, retain) UILabel *lineLabel;
 @property (nonatomic, retain) NSArray *titleArray;
 @property (nonatomic, assign) NSInteger presentTag;
 @property (nonatomic, assign) NSInteger arrayCount;
@@ -36,7 +35,7 @@
 }
 
 - (void)createTabBarUI {
-    self.width = 60;
+    self.width = (self.viewWidth - 75) / self.arrayCount;
     self.scrollViewTop = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.viewWidth - 75, 40)];
     self.scrollViewTop.contentSize = CGSizeMake(self.arrayCount * 60, 0);
     [self addSubview:self.scrollViewTop];
@@ -56,10 +55,6 @@
     }
     self.presentTag = 10000;
     self.flag = NO;
-
-    self.lineLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 39, 60, 1)];
-    self.lineLabel.backgroundColor = [HXColor hx_colorWithHexRGBAString:@"#c21d02"];
-    [self.scrollViewTop addSubview:self.lineLabel];
 }
 
 - (void)click:(UIButton *)button {
@@ -74,7 +69,6 @@
     if (button.tag >= 10004 && button.tag < (self.arrayCount + 10000 - 3)) {
         self.scrollViewTop.contentOffset = CGPointMake(self.width * (button.tag - 2 - 10000), 0);
     }
-    [self changedLindLabelWithButtonTag:button.tag - 10000];
     NSString *str = [NSString stringWithFormat:@"%ld", (button.tag - 10000)];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"DTNavigationBarView" object:str];
     self.flag = NO;
@@ -94,17 +88,9 @@
         UIButton *button1 = (UIButton *)[self viewWithTag:(temp + 10000)];
         button1.titleLabel.font = [UIFont systemFontOfSize:20];
         [button1 setTitleColor:[HXColor hx_colorWithHexRGBAString:@"#c21d02"] forState:UIControlStateNormal];
-        [self changedLindLabelWithButtonTag:temp];
 
         self.presentTag = temp + 10000;
     }
-}
-
-- (void)changedLindLabelWithButtonTag:(NSInteger)tag {
-    [UIView animateWithDuration:0.1
-                     animations:^{
-                       self.lineLabel.frame = CGRectMake(self.width * tag, 39, 60, 1);
-                     }];
 }
 
 - (void)dealloc {
