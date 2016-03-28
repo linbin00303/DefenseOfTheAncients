@@ -7,7 +7,7 @@
 //
 
 #import "DTInformationViewController.h"
-#import "DTMatchViewController.h"
+#import "DTGameMatchViewController.h"
 #import "DTMediaViewController.h"
 #import "DTNavigationBarView.h"
 #import "DTOfficialViewController.h"
@@ -67,7 +67,7 @@
     DTOfficialViewController *OfficalVC = [[DTOfficialViewController alloc] init];
     DTUpdateViewController *updateVC = [[DTUpdateViewController alloc] init];
     DTMediaViewController *mediaVC = [[DTMediaViewController alloc] init];
-    DTMatchViewController *matchVC = [[DTMatchViewController alloc] init];
+    DTGameMatchViewController *matchVC = [[DTGameMatchViewController alloc] init];
 
     [self addChildViewController:wholeVC];
     [self addChildViewController:OfficalVC];

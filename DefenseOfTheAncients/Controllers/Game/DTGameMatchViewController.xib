@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DTGameMatchViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sux-lz-LKs">
+                    <rect key="frame" x="0.0" y="50" width="320" height="518"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzG-cH-In7">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <subviews>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iIc-6o-yws" customClass="DTSegmentedControl">
+                            <rect key="frame" x="10" y="11" width="300" height="29"/>
+                            <segments>
+                                <segment title=" 高端组"/>
+                                <segment title="职业组"/>
+                                <segment title="业余组"/>
+                                <segment title="完美赛事"/>
+                            </segments>
+                        </segmentedControl>
+                    </subviews>
+                    <color key="backgroundColor" red="0.85882352941176465" green="0.85882352941176465" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="iIc-6o-yws" secondAttribute="trailing" constant="10" id="A5r-ln-9de"/>
+                        <constraint firstAttribute="height" constant="50" id="KtZ-SO-mUJ"/>
+                        <constraint firstItem="iIc-6o-yws" firstAttribute="leading" secondItem="dzG-cH-In7" secondAttribute="leading" constant="10" id="OlT-gr-z5c"/>
+                        <constraint firstItem="iIc-6o-yws" firstAttribute="centerY" secondItem="dzG-cH-In7" secondAttribute="centerY" id="dN1-Kv-NvH"/>
+                        <constraint firstItem="iIc-6o-yws" firstAttribute="centerX" secondItem="dzG-cH-In7" secondAttribute="centerX" id="p7z-DD-egY"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="sux-lz-LKs" firstAttribute="top" secondItem="dzG-cH-In7" secondAttribute="bottom" id="0ZM-yK-dYK"/>
+                <constraint firstAttribute="bottom" secondItem="sux-lz-LKs" secondAttribute="bottom" id="7Jl-gb-LIo"/>
+                <constraint firstItem="sux-lz-LKs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="F8d-ge-dVn"/>
+                <constraint firstItem="dzG-cH-In7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KIF-i2-Nyv"/>
+                <constraint firstAttribute="trailing" secondItem="sux-lz-LKs" secondAttribute="trailing" id="kGG-7r-4pJ"/>
+                <constraint firstAttribute="trailing" secondItem="dzG-cH-In7" secondAttribute="trailing" id="nvd-iR-leN"/>
+                <constraint firstItem="dzG-cH-In7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="v3U-8B-XjH"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

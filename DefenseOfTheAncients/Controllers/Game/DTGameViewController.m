@@ -5,6 +5,7 @@
 //  Created by Mr.Yao on 16/3/15.
 //  Copyright © 2016年 Mr.Yao. All rights reserved.
 //
+#import "DTGameMatchViewController.h"
 #import "DTGameViewController.h"
 #import "DTNavigationBarView.h"
 #import "DTScheduleViewController.h"
@@ -22,7 +23,6 @@
     [self setUpViews];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self addChildViewControllerToScroller];
-
 }
 
 #pragma mark - Getters & Setters
@@ -54,14 +54,17 @@
 
 - (void)addChildViewControllerToScroller {
     DTScheduleViewController *ScheduleVC = [[DTScheduleViewController alloc] init];
-    
+
     [self addChildViewController:ScheduleVC];
-    
+
     ScheduleVC.view.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight - 64 - 44);
-   
-    
+
     [self.scrollViewDown addSubview:ScheduleVC.view];
 
+    DTGameMatchViewController *gameMatchVC = [[DTGameMatchViewController alloc] init];
+    [self addChildViewController:gameMatchVC];
+    gameMatchVC.view.frame = CGRectMake(kScreenWidth, 0, kScreenWidth, kScreenHeight - 64 - 44);
+    [self.scrollViewDown addSubview:gameMatchVC.view];
 }
 
 #pragma mark - NSNotificationCenter selector

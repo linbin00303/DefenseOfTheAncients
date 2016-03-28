@@ -10,6 +10,7 @@
 #import "DTApiManager.h"
 #import "DTTreasureBoxViewController.h"
 #import "DTTreasureCell.h"
+#import "DTNavItems.h"
 
 @interface DTTreasureBoxViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -22,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.titleView = [DTNavItems titleViewWithText:@"宝盒"];
     [self setUpViews];
     [self requestDataSource];
 }
