@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DTGameMatchViewController">
             <connections>
+                <outlet property="segmentControl" destination="iIc-6o-yws" id="gdP-IT-2EN"/>
                 <outlet property="tableView" destination="sux-lz-LKs" id="7LC-bL-ZwY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -35,6 +36,9 @@
                                         <segment title="业余组"/>
                                         <segment title="完美赛事"/>
                                     </segments>
+                                    <connections>
+                                        <action selector="segmentControlAction:" destination="-1" eventType="valueChanged" id="GHV-uH-Is2"/>
+                                    </connections>
                                 </segmentedControl>
                             </subviews>
                             <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

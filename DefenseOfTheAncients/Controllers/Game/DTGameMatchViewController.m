@@ -11,11 +11,13 @@
 #import "DTGameMatchTableViewCell.h"
 #import "DTGameMatchViewController.h"
 #import "DTRefreshHeader.h"
+#import "DTSegmentedControl.h"
 
 @interface DTGameMatchViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataSource;
-
+@property (weak, nonatomic) IBOutlet DTSegmentedControl *segmentControl;
+@property (nonatomic, assign) NSInteger type;
 @end
 
 @implementation DTGameMatchViewController
@@ -30,6 +32,7 @@
     self.tableView.dataSource = self;
     self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.showsHorizontalScrollIndicator = NO;
+    self.type = 1;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([DTGameMatchTableViewCell class]) bundle:nil]
          forCellReuseIdentifier:kDTGameMatchTableViewCellIdentifier];
     self.tableView.mj_header = [DTRefreshHeader headerWithRefreshingBlock:^{
@@ -51,13 +54,15 @@
     if (!self.dataSource) {
         self.dataSource = [[NSMutableArray alloc] init];
     }
-    [[DTApiManager sharedApiManager] requestGmaeMatchDataSourceBlocks:^(NSArray *matchItems) {
-      [self.dataSource addObjectsFromArray:matchItems];
-      [self.tableView reloadData];
-      [self stopRefreshing];
-    }
+    [[DTApiManager sharedApiManager] requestGmaeMatchDataWithType:self.type
+        SourceBlocks:^(NSArray *matchItems) {
+          [self.dataSource addObjectsFromArray:matchItems];
+          [self.tableView reloadData];
+          [self stopRefreshing];
+        }
         failBlocks:^(NSError *error) {
           [self stopRefreshing];
+
         }];
 }
 
@@ -73,6 +78,13 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 180;
+}
+- (IBAction)segmentControlAction:(id)sender {
+    DTSegmentedControl *segmentControl = (DTSegmentedControl *)sender;
+    self.type = segmentControl.selectedSegmentIndex+1;
+    [segmentControl setSelectedSegmentIndex:segmentControl.selectedSegmentIndex];
+    [self.dataSource removeAllObjects];
+    [self requestdataSource];
 }
 
 - (void)didReceiveMemoryWarning {
