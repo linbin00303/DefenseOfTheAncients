@@ -17,6 +17,8 @@
 		5072157E1CA8D3EE00F2E6EF /* DTGameMatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5072157C1CA8D3EE00F2E6EF /* DTGameMatchViewController.m */; };
 		5072157F1CA8D3EE00F2E6EF /* DTGameMatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5072157D1CA8D3EE00F2E6EF /* DTGameMatchViewController.xib */; };
 		507215821CA8D3FC00F2E6EF /* DTSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 507215811CA8D3FC00F2E6EF /* DTSegmentedControl.m */; };
+		507215861CA8D6FF00F2E6EF /* DTGameCorpsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 507215841CA8D6FF00F2E6EF /* DTGameCorpsViewController.m */; };
+		507215871CA8D6FF00F2E6EF /* DTGameCorpsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 507215851CA8D6FF00F2E6EF /* DTGameCorpsViewController.xib */; };
 		50BC9ACD1C99AFD600C1EB78 /* DTInformationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BC9ACB1C99AFD600C1EB78 /* DTInformationDetailViewController.m */; };
 		50BC9ACE1C99AFD600C1EB78 /* DTInformationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50BC9ACC1C99AFD600C1EB78 /* DTInformationDetailViewController.xib */; };
 		50BC9AD11C99BA9C00C1EB78 /* DTNavItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BC9AD01C99BA9C00C1EB78 /* DTNavItems.m */; };
@@ -100,6 +102,9 @@
 		5072157D1CA8D3EE00F2E6EF /* DTGameMatchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTGameMatchViewController.xib; sourceTree = "<group>"; };
 		507215801CA8D3FC00F2E6EF /* DTSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSegmentedControl.h; sourceTree = "<group>"; };
 		507215811CA8D3FC00F2E6EF /* DTSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSegmentedControl.m; sourceTree = "<group>"; };
+		507215831CA8D6FF00F2E6EF /* DTGameCorpsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGameCorpsViewController.h; sourceTree = "<group>"; };
+		507215841CA8D6FF00F2E6EF /* DTGameCorpsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTGameCorpsViewController.m; sourceTree = "<group>"; };
+		507215851CA8D6FF00F2E6EF /* DTGameCorpsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTGameCorpsViewController.xib; sourceTree = "<group>"; };
 		50BC9ACA1C99AFD600C1EB78 /* DTInformationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTInformationDetailViewController.h; sourceTree = "<group>"; };
 		50BC9ACB1C99AFD600C1EB78 /* DTInformationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTInformationDetailViewController.m; sourceTree = "<group>"; };
 		50BC9ACC1C99AFD600C1EB78 /* DTInformationDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTInformationDetailViewController.xib; sourceTree = "<group>"; };
@@ -416,6 +421,9 @@
 				504967F11CA548810082CE7B /* DTScheduleViewController.h */,
 				504967F21CA548810082CE7B /* DTScheduleViewController.m */,
 				504967F31CA548810082CE7B /* DTScheduleViewController.xib */,
+				507215831CA8D6FF00F2E6EF /* DTGameCorpsViewController.h */,
+				507215841CA8D6FF00F2E6EF /* DTGameCorpsViewController.m */,
+				507215851CA8D6FF00F2E6EF /* DTGameCorpsViewController.xib */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -693,6 +701,7 @@
 				50D201BE1C98191900B99E3B /* DTGameViewController.xib in Resources */,
 				50D201AA1C9818E000B99E3B /* DTInformationViewController.xib in Resources */,
 				504967F51CA548810082CE7B /* DTScheduleViewController.xib in Resources */,
+				507215871CA8D6FF00F2E6EF /* DTGameCorpsViewController.xib in Resources */,
 				50D2015C1C980CA700B99E3B /* Assets.xcassets in Resources */,
 				50F795411CA3FFC700389F5D /* DTTreasureCell.xib in Resources */,
 				5072157F1CA8D3EE00F2E6EF /* DTGameMatchViewController.xib in Resources */,
@@ -774,6 +783,7 @@
 				50D201B81C98190900B99E3B /* DTVideoViewController.m in Sources */,
 				50C78DD31C99423F00F23D9F /* DTApiManager+DTInformation.m in Sources */,
 				50D201541C980CA700B99E3B /* AppDelegate.m in Sources */,
+				507215861CA8D6FF00F2E6EF /* DTGameCorpsViewController.m in Sources */,
 				50D201BD1C98191900B99E3B /* DTGameViewController.m in Sources */,
 				504967E91CA4EF650082CE7B /* DTScheduleTableViewCell.m in Sources */,
 				50D201A91C9818E000B99E3B /* DTInformationViewController.m in Sources */,

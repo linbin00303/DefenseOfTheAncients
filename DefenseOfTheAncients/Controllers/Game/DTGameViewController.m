@@ -9,6 +9,7 @@
 #import "DTGameViewController.h"
 #import "DTNavigationBarView.h"
 #import "DTScheduleViewController.h"
+#import "DTGameCorpsViewController.h"
 
 @interface DTGameViewController () <UIScrollViewDelegate>
 @property (nonatomic, retain) DTNavigationBarView *naTabView;
@@ -65,6 +66,11 @@
     [self addChildViewController:gameMatchVC];
     gameMatchVC.view.frame = CGRectMake(kScreenWidth, 0, kScreenWidth, kScreenHeight - 64 - 44);
     [self.scrollViewDown addSubview:gameMatchVC.view];
+    
+    DTGameCorpsViewController *gameCorpsVC = [[DTGameCorpsViewController alloc]init];
+    [self addChildViewController:gameCorpsVC];
+    gameCorpsVC.view.frame = CGRectMake(2*kScreenWidth, 0, kScreenWidth, kScreenHeight - 64 - 44);
+    [self.scrollViewDown addSubview:gameCorpsVC.view];
 }
 
 #pragma mark - NSNotificationCenter selector
